@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="赵峰的DEMO.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="赵峰的DEMO_web_未来_测试_MESWSMain" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.10.7:20010/MESWSMain.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

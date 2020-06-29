@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AC8AB27-4277-46E5-9B63-A107AC928F91}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPpurchase</RootNamespace>
+    <AssemblyName>ERPpurchase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.LabelManager2, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\BIN\Interop.LabelManager2.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterBaseUI">
+      <HintPath>..\MasterBaseUI\obj\Debug\MasterBaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DW生产计划池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DW生产计划池.Designer.cs">
+      <DependentUpon>DW生产计划池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dw计划池_u8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dw计划池_u8.Designer.cs">
+      <DependentUpon>dw计划池_u8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DW采购池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DW采购池.Designer.cs">
+      <DependentUpon>DW采购池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dw采购池_u8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dw采购池_u8.Designer.cs">
+      <DependentUpon>dw采购池_u8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm单推采购.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm单推采购.Designer.cs">
+      <DependentUpon>fm单推采购.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm查看替代料.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm查看替代料.Designer.cs">
+      <DependentUpon>fm查看替代料.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm计划池修改基础信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm计划池修改基础信息.Designer.cs">
+      <DependentUpon>fm计划池修改基础信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm采购单入库选择项.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm采购单入库选择项.Designer.cs">
+      <DependentUpon>fm采购单入库选择项.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm采购开票驳回.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm采购开票驳回.Designer.cs">
+      <DependentUpon>fm采购开票驳回.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form赠送.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form赠送.Designer.cs">
+      <DependentUpon>Form赠送.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm供应商维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm供应商维护.Designer.cs">
+      <DependentUpon>frm供应商维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm安全库存提醒界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm安全库存提醒界面.Designer.cs">
+      <DependentUpon>frm安全库存提醒界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm来料入库关闭完成原因.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm来料入库关闭完成原因.Designer.cs">
+      <DependentUpon>frm来料入库关闭完成原因.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm生产制令表_不用.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm生产制令表_不用.Designer.cs">
+      <DependentUpon>frm生产制令表_不用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm财务采购确认查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm财务采购确认查询.Designer.cs">
+      <DependentUpon>frm财务采购确认查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购价格核实界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购价格核实界面.Designer.cs">
+      <DependentUpon>frm采购价格核实界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购入库单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购入库单.Designer.cs">
+      <DependentUpon>frm采购入库单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购入库单明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购入库单明细.Designer.cs">
+      <DependentUpon>frm采购入库单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购入库视图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购入库视图.Designer.cs">
+      <DependentUpon>frm采购入库视图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购单.Designer.cs">
+      <DependentUpon>frm采购单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购单入库明细选择.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购单入库明细选择.Designer.cs">
+      <DependentUpon>frm采购单入库明细选择.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购单明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购单明细.Designer.cs">
+      <DependentUpon>frm采购单明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购单明细视图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购单明细视图.Designer.cs">
+      <DependentUpon>frm采购单明细视图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购发票核销界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购发票核销界面.Designer.cs">
+      <DependentUpon>frm采购发票核销界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购开票列表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购开票列表.Designer.cs">
+      <DependentUpon>frm采购开票列表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购检验入库明细选择.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购检验入库明细选择.Designer.cs">
+      <DependentUpon>frm采购检验入库明细选择.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购计划_未用.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购计划_未用.Designer.cs">
+      <DependentUpon>frm采购计划_未用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购记录外协领料界面_弃用.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购记录外协领料界面_弃用.Designer.cs">
+      <DependentUpon>frm采购记录外协领料界面_弃用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiBom修改确认.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiBom修改确认.Designer.cs">
+      <DependentUpon>uiBom修改确认.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui临时用生产计划池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui临时用生产计划池.Designer.cs">
+      <DependentUpon>ui临时用生产计划池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui临时用采购池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui临时用采购池.Designer.cs">
+      <DependentUpon>ui临时用采购池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui供应商交货及时率.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui供应商交货及时率.Designer.cs">
+      <DependentUpon>ui供应商交货及时率.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui供应商采购入库统计.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui供应商采购入库统计.Designer.cs">
+      <DependentUpon>ui供应商采购入库统计.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui关联供应商退货.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui关联供应商退货.Designer.cs">
+      <DependentUpon>ui关联供应商退货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui委外入库与出库对应表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui委外入库与出库对应表.Designer.cs">
+      <DependentUpon>ui委外入库与出库对应表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui委外发料核销界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui委外发料核销界面.Designer.cs">
+      <DependentUpon>ui委外发料核销界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui委外补料.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui委外补料.Designer.cs">
+      <DependentUpon>ui委外补料.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui委外领料出库未核销报表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui委外领料出库未核销报表.Designer.cs">
+      <DependentUpon>ui委外领料出库未核销报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui开发出库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui开发出库.Designer.cs">
+      <DependentUpon>ui开发出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI开发部采购入库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI开发部采购入库.Designer.cs">
+      <DependentUpon>UI开发部采购入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui拒收操作.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui拒收操作.designer.cs">
+      <DependentUpon>ui拒收操作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui拒收核销.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui拒收核销.Designer.cs">
+      <DependentUpon>ui拒收核销.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui拒收核销明细查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui拒收核销明细查询.Designer.cs">
+      <DependentUpon>ui拒收核销明细查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui来料已检待入库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui来料已检待入库.Designer.cs">
+      <DependentUpon>ui来料已检待入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui来料已检待入库查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui来料已检待入库查询.Designer.cs">
+      <DependentUpon>ui来料已检待入库查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui来料批次打印.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui来料批次打印.Designer.cs">
+      <DependentUpon>ui来料批次打印.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI查看开发虚拟库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI查看开发虚拟库.Designer.cs">
+      <DependentUpon>UI查看开发虚拟库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui物料采购汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui物料采购汇总.Designer.cs">
+      <DependentUpon>ui物料采购汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui计划池转制令_u8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui计划池转制令_u8.Designer.cs">
+      <DependentUpon>ui计划池转制令_u8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI计划采购量新方案_弃用.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI计划采购量新方案_弃用.Designer.cs">
+      <DependentUpon>UI计划采购量新方案_弃用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI计划采购量新方案2（不用）.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI计划采购量新方案2（不用）.Designer.cs">
+      <DependentUpon>UI计划采购量新方案2（不用）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI计划采购量新方案_S2（不用）.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI计划采购量新方案_S2（不用）.Designer.cs">
+      <DependentUpon>UI计划采购量新方案_S2（不用）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui请购单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui请购单.Designer.cs">
+      <DependentUpon>ui请购单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui请购单列表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui请购单列表.Designer.cs">
+      <DependentUpon>ui请购单列表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI采购入库统计.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI采购入库统计.Designer.cs">
+      <DependentUpon>UI采购入库统计.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购开票明细汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购开票明细汇总.Designer.cs">
+      <DependentUpon>ui采购开票明细汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购月报_未用.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购月报_未用.Designer.cs">
+      <DependentUpon>ui采购月报_未用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI采购未开票查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI采购未开票查询.Designer.cs">
+      <DependentUpon>UI采购未开票查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购订单达成率.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购订单达成率.Designer.cs">
+      <DependentUpon>ui采购订单达成率.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购达成率（弃用）.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购达成率（弃用）.Designer.cs">
+      <DependentUpon>ui采购达成率（弃用）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购退货申请.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购退货申请.Designer.cs">
+      <DependentUpon>ui采购退货申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购退货申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购退货申请查询.Designer.cs">
+      <DependentUpon>ui采购退货申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui需求量计算.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui需求量计算.Designer.cs">
+      <DependentUpon>ui需求量计算.cs</DependentUpon>
+    </Compile>
+    <Compile Include="没用frm采购记录来料检验主表界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="没用frm采购记录来料检验主表界面.Designer.cs">
+      <DependentUpon>没用frm采购记录来料检验主表界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="没用frm采购记录来料检验详细界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="没用frm采购记录来料检验详细界面.Designer.cs">
+      <DependentUpon>没用frm采购记录来料检验详细界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购送检单列表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购送检单列表.Designer.cs">
+      <DependentUpon>frm采购送检单列表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm采购送检单界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm采购送检单界面.Designer.cs">
+      <DependentUpon>frm采购送检单界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI采购开票.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI采购开票.Designer.cs">
+      <DependentUpon>UI采购开票.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DW生产计划池.resx">
+      <DependentUpon>DW生产计划池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dw计划池_u8.resx">
+      <DependentUpon>dw计划池_u8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DW采购池.resx">
+      <DependentUpon>DW采购池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dw采购池_u8.resx">
+      <DependentUpon>dw采购池_u8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm单推采购.resx">
+      <DependentUpon>fm单推采购.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm查看替代料.resx">
+      <DependentUpon>fm查看替代料.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm计划池修改基础信息.resx">
+      <DependentUpon>fm计划池修改基础信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm采购单入库选择项.resx">
+      <DependentUpon>fm采购单入库选择项.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm采购开票驳回.resx">
+      <DependentUpon>fm采购开票驳回.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form赠送.resx">
+      <DependentUpon>Form赠送.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm供应商维护.resx">
+      <DependentUpon>frm供应商维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm安全库存提醒界面.resx">
+      <DependentUpon>frm安全库存提醒界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm来料入库关闭完成原因.resx">
+      <DependentUpon>frm来料入库关闭完成原因.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm生产制令表_不用.resx">
+      <DependentUpon>frm生产制令表_不用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm财务采购确认查询.resx">
+      <DependentUpon>frm财务采购确认查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购价格核实界面.resx">
+      <DependentUpon>frm采购价格核实界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购入库单.resx">
+      <DependentUpon>frm采购入库单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购入库单明细.resx">
+      <DependentUpon>frm采购入库单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购入库视图.resx">
+      <DependentUpon>frm采购入库视图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购单.resx">
+      <DependentUpon>frm采购单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购单入库明细选择.resx">
+      <DependentUpon>frm采购单入库明细选择.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购单明细.resx">
+      <DependentUpon>frm采购单明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购单明细视图.resx">
+      <DependentUpon>frm采购单明细视图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购发票核销界面.resx">
+      <DependentUpon>frm采购发票核销界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购开票列表.resx">
+      <DependentUpon>frm采购开票列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购检验入库明细选择.resx">
+      <DependentUpon>frm采购检验入库明细选择.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购计划_未用.resx">
+      <DependentUpon>frm采购计划_未用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购记录外协领料界面_弃用.resx">
+      <DependentUpon>frm采购记录外协领料界面_弃用.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="uiBom修改确认.resx">
+      <DependentUpon>uiBom修改确认.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui临时用生产计划池.resx">
+      <DependentUpon>ui临时用生产计划池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui临时用采购池.resx">
+      <DependentUpon>ui临时用采购池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui供应商交货及时率.resx">
+      <DependentUpon>ui供应商交货及时率.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui供应商采购入库统计.resx">
+      <DependentUpon>ui供应商采购入库统计.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui关联供应商退货.resx">
+      <DependentUpon>ui关联供应商退货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui委外入库与出库对应表.resx">
+      <DependentUpon>ui委外入库与出库对应表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui委外发料核销界面.resx">
+      <DependentUpon>ui委外发料核销界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui委外补料.resx">
+      <DependentUpon>ui委外补料.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui委外领料出库未核销报表.resx">
+      <DependentUpon>ui委外领料出库未核销报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui开发出库.resx">
+      <DependentUpon>ui开发出库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI开发部采购入库.resx">
+      <DependentUpon>UI开发部采购入库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui拒收操作.resx">
+      <DependentUpon>ui拒收操作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui拒收核销.resx">
+      <DependentUpon>ui拒收核销.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui拒收核销明细查询.resx">
+      <DependentUpon>ui拒收核销明细查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui来料已检待入库.resx">
+      <DependentUpon>ui来料已检待入库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui来料已检待入库查询.resx">
+      <DependentUpon>ui来料已检待入库查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui来料批次打印.resx">
+      <DependentUpon>ui来料批次打印.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI查看开发虚拟库.resx">
+      <DependentUpon>UI查看开发虚拟库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui物料采购汇总.resx">
+      <DependentUpon>ui物料采购汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui计划池转制令_u8.resx">
+      <DependentUpon>ui计划池转制令_u8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI计划采购量新方案_弃用.resx">
+      <DependentUpon>UI计划采购量新方案_弃用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI计划采购量新方案2（不用）.resx">
+      <DependentUpon>UI计划采购量新方案2（不用）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI计划采购量新方案_S2（不用）.resx">
+      <DependentUpon>UI计划采购量新方案_S2（不用）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui请购单.resx">
+      <DependentUpon>ui请购单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui请购单列表.resx">
+      <DependentUpon>ui请购单列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI采购入库统计.resx">
+      <DependentUpon>UI采购入库统计.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购开票明细汇总.resx">
+      <DependentUpon>ui采购开票明细汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购月报_未用.resx">
+      <DependentUpon>ui采购月报_未用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI采购未开票查询.resx">
+      <DependentUpon>UI采购未开票查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购订单达成率.resx">
+      <DependentUpon>ui采购订单达成率.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购达成率（弃用）.resx">
+      <DependentUpon>ui采购达成率（弃用）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购退货申请.resx">
+      <DependentUpon>ui采购退货申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购退货申请查询.resx">
+      <DependentUpon>ui采购退货申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui需求量计算.resx">
+      <DependentUpon>ui需求量计算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="没用frm采购记录来料检验主表界面.resx">
+      <DependentUpon>没用frm采购记录来料检验主表界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购记录来料检验详细界面.resx">
+      <DependentUpon>没用frm采购记录来料检验详细界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购送检单列表.resx">
+      <DependentUpon>frm采购送检单列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm采购送检单界面.resx">
+      <DependentUpon>frm采购送检单界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI采购开票.resx">
+      <DependentUpon>UI采购开票.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFolder_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFolder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseData\BaseData.csproj">
+      <Project>{b2c6a2c9-188e-4b9e-9adc-d28195938d24}</Project>
+      <Name>BaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CFileTransmission\CFileTransmission.csproj">
+      <Project>{d1a8aeb4-8bb9-4582-91a1-c2cca65d78f4}</Project>
+      <Name>CFileTransmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPproduct\ERPproduct.csproj">
+      <Project>{192b81d1-18b5-4f9b-8a00-44c8640f89dc}</Project>
+      <Name>ERPproduct</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPreport\ERPreport.csproj">
+      <Project>{d259d2c2-c499-4dc6-b3fa-67ff36c5e998}</Project>
+      <Name>ERPreport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspection\ItemInspection.csproj">
+      <Project>{67fba310-912e-4756-a5a6-ec1f23737d9f}</Project>
+      <Name>ItemInspection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterStart\MasterStart.csproj">
+      <Project>{bed166d2-0b41-42e8-8753-46f60250dbe2}</Project>
+      <Name>MasterStart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoldMangement\MoldMangement.csproj">
+      <Project>{76393504-A8B2-42D1-93A0-F63A853EFDE9}</Project>
+      <Name>MoldMangement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockCore\StockCore.csproj">
+      <Project>{d4497319-a17d-44a0-822d-a62256e83b36}</Project>
+      <Name>StockCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WSAdapter\WSAdapter.csproj">
+      <Project>{7a94c20e-559a-4b6c-bf45-09c5b7fa46e5}</Project>
+      <Name>WSAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAllMarked_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveFolder_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homework.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homework1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generate_tables_32px_1186297_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_database_30.984126984127px_1210710_easyicon.net.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSLocaldata" targetNamespace="http://tempuri.org/DSLocaldata.xsd" xmlns:mstns="http://tempuri.org/DSLocaldata.xsd" xmlns="http://tempuri.org/DSLocaldata.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSLocaldata" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSLocaldata" msprop:Generator_UserDSName="DSLocaldata">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LocalData" msprop:Generator_TableClassName="LocalDataDataTable" msprop:Generator_TableVarName="tableLocalData" msprop:Generator_TablePropName="LocalData" msprop:Generator_RowDeletingName="LocalDataRowDeleting" msprop:Generator_RowChangingName="LocalDataRowChanging" msprop:Generator_RowEvHandlerName="LocalDataRowChangeEventHandler" msprop:Generator_RowDeletedName="LocalDataRowDeleted" msprop:Generator_UserTableName="LocalData" msprop:Generator_RowChangedName="LocalDataRowChanged" msprop:Generator_RowEvArgName="LocalDataRowChangeEvent" msprop:Generator_RowClassName="LocalDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="key" msprop:Generator_ColumnVarNameInTable="columnkey" msprop:Generator_ColumnPropNameInRow="key" msprop:Generator_ColumnPropNameInTable="keyColumn" msprop:Generator_UserColumnName="key" type="xs:string" minOccurs="0" />
+              <xs:element name="pos" msprop:Generator_ColumnVarNameInTable="columnpos" msprop:Generator_ColumnPropNameInRow="pos" msprop:Generator_ColumnPropNameInTable="posColumn" msprop:Generator_UserColumnName="pos" type="xs:int" minOccurs="0" />
+              <xs:element name="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" msprop:Generator_UserColumnName="value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LocalDataBIN" msprop:Generator_TableClassName="LocalDataBINDataTable" msprop:Generator_TableVarName="tableLocalDataBIN" msprop:Generator_TablePropName="LocalDataBIN" msprop:Generator_RowDeletingName="LocalDataBINRowDeleting" msprop:Generator_RowChangingName="LocalDataBINRowChanging" msprop:Generator_RowEvHandlerName="LocalDataBINRowChangeEventHandler" msprop:Generator_RowDeletedName="LocalDataBINRowDeleted" msprop:Generator_UserTableName="LocalDataBIN" msprop:Generator_RowChangedName="LocalDataBINRowChanged" msprop:Generator_RowEvArgName="LocalDataBINRowChangeEvent" msprop:Generator_RowClassName="LocalDataBINRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="key" msprop:Generator_ColumnVarNameInTable="columnkey" msprop:Generator_ColumnPropNameInRow="key" msprop:Generator_ColumnPropNameInTable="keyColumn" msprop:Generator_UserColumnName="key" type="xs:string" minOccurs="0" />
+              <xs:element name="pos" msprop:Generator_ColumnVarNameInTable="columnpos" msprop:Generator_ColumnPropNameInRow="pos" msprop:Generator_ColumnPropNameInTable="posColumn" msprop:Generator_UserColumnName="pos" type="xs:int" minOccurs="0" />
+              <xs:element name="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" msprop:Generator_UserColumnName="value" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

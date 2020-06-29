@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4497319-A17D-44A0-822D-A62256E83B36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockCore</RootNamespace>
+    <AssemblyName>StockCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="MasterBaseUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MasterBaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalStandardPlan.cs" />
+    <Compile Include="ECR变更审核查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ECR变更审核查询.Designer.cs">
+      <DependentUpon>ECR变更审核查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECR变更申请审核.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ECR变更申请审核.Designer.cs">
+      <DependentUpon>ECR变更申请审核.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ECR变更申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ECR变更申请查询.Designer.cs">
+      <DependentUpon>ECR变更申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form出入多选.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form出入多选.Designer.cs">
+      <DependentUpon>Form出入多选.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_添加意见.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_添加意见.Designer.cs">
+      <DependentUpon>frm_添加意见.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库月出入库结转界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库月出入库结转界面.Designer.cs">
+      <DependentUpon>frm仓库月出入库结转界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其他入库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其他入库.Designer.cs">
+      <DependentUpon>frm其他入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其他入库查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其他入库查询.Designer.cs">
+      <DependentUpon>frm其他入库查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其他出库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其他出库.Designer.cs">
+      <DependentUpon>frm其他出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其他出库查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其他出库查询.Designer.cs">
+      <DependentUpon>frm其他出库查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其它出入库申请.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其它出入库申请.Designer.cs">
+      <DependentUpon>frm其它出入库申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm其它出入库申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm其它出入库申请查询.Designer.cs">
+      <DependentUpon>frm其它出入库申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm基础信息仓库表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm基础信息仓库表.Designer.cs">
+      <DependentUpon>frm基础信息仓库表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm基础信息仓库库位表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm基础信息仓库库位表.Designer.cs">
+      <DependentUpon>frm基础信息仓库库位表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StockCorer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIRemakeIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIRemakeIn.Designer.cs">
+      <DependentUpon>UIRemakeIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiRemakeout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uiRemakeout.Designer.cs">
+      <DependentUpon>uiRemakeout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiReworkApply.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UiReworkApply.Designer.cs">
+      <DependentUpon>UiReworkApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_ECR变更申请.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_ECR变更申请.Designer.cs">
+      <DependentUpon>ui_ECR变更申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui料出库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui料出库.Designer.cs">
+      <DependentUpon>ui料出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui月结转.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui月结转.Designer.cs">
+      <DependentUpon>ui月结转.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui材料出库查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui材料出库查询.Designer.cs">
+      <DependentUpon>ui材料出库查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui材料出库申请.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui材料出库申请.Designer.cs">
+      <DependentUpon>ui材料出库申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI返修申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI返修申请查询.Designer.cs">
+      <DependentUpon>UI返修申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="业务单号查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="业务单号查询.Designer.cs">
+      <DependentUpon>业务单号查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="其他出入库申请审核（未用）.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="其他出入库申请审核（未用）.Designer.cs">
+      <DependentUpon>其他出入库申请审核（未用）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="月结转查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="月结转查询.Designer.cs">
+      <DependentUpon>月结转查询.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspection\ItemInspection.csproj">
+      <Project>{67fba310-912e-4756-a5a6-ec1f23737d9f}</Project>
+      <Name>ItemInspection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WSAdapter\WSAdapter.csproj">
+      <Project>{7a94c20e-559a-4b6c-bf45-09c5b7fa46e5}</Project>
+      <Name>WSAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ECR变更审核查询.resx">
+      <DependentUpon>ECR变更审核查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECR变更申请审核.resx">
+      <DependentUpon>ECR变更申请审核.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ECR变更申请查询.resx">
+      <DependentUpon>ECR变更申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form出入多选.resx">
+      <DependentUpon>Form出入多选.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_添加意见.resx">
+      <DependentUpon>frm_添加意见.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库月出入库结转界面.resx">
+      <DependentUpon>frm仓库月出入库结转界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其他入库.resx">
+      <DependentUpon>frm其他入库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其他入库查询.resx">
+      <DependentUpon>frm其他入库查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其他出库.resx">
+      <DependentUpon>frm其他出库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其他出库查询.resx">
+      <DependentUpon>frm其他出库查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其它出入库申请.resx">
+      <DependentUpon>frm其它出入库申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm其它出入库申请查询.resx">
+      <DependentUpon>frm其它出入库申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm基础信息仓库库位表.resx">
+      <DependentUpon>frm基础信息仓库库位表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm基础信息仓库表.resx">
+      <DependentUpon>frm基础信息仓库表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_ECR变更申请.resx">
+      <DependentUpon>ui_ECR变更申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="月结转查询.resx">
+      <DependentUpon>月结转查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="UIRemakeIn.resx">
+      <DependentUpon>UIRemakeIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiRemakeout.resx">
+      <DependentUpon>uiRemakeout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UiReworkApply.resx">
+      <DependentUpon>UiReworkApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui料出库.resx">
+      <DependentUpon>ui料出库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui月结转.resx">
+      <DependentUpon>ui月结转.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui材料出库查询.resx">
+      <DependentUpon>ui材料出库查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui材料出库申请.resx">
+      <DependentUpon>ui材料出库申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI返修申请查询.resx">
+      <DependentUpon>UI返修申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务单号查询.resx">
+      <DependentUpon>业务单号查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="其他出入库申请审核（未用）.resx">
+      <DependentUpon>其他出入库申请审核（未用）.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_32px_1189283_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

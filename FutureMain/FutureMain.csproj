@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28BD0B9A-FD85-483C-B85B-E8C4B9633A4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FutureMain</RootNamespace>
+    <AssemblyName>FutureMain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\BaseData.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MasterBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MasterBase.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterBaseUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MasterBaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WSAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\WSAdapter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmLog.Designer.cs">
+      <DependentUpon>fmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm打印模板维护.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm打印模板维护.designer.cs">
+      <DependentUpon>fm打印模板维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FutureMainFM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FutureMainFM.Designer.cs">
+      <DependentUpon>FutureMainFM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="fm消息窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm消息窗体.Designer.cs">
+      <DependentUpon>fm消息窗体.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fmLog.en-UM.resx">
+      <DependentUpon>fmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmLog.en-US.resx">
+      <DependentUpon>fmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmLog.resx">
+      <DependentUpon>fmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm打印模板维护.resx">
+      <DependentUpon>fm打印模板维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutureMainFM.byn.resx">
+      <DependentUpon>FutureMainFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutureMainFM.en-GB.resx">
+      <DependentUpon>FutureMainFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutureMainFM.en-US.resx">
+      <DependentUpon>FutureMainFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutureMainFM.resx">
+      <DependentUpon>FutureMainFM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm消息窗体.resx">
+      <DependentUpon>fm消息窗体.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDataItem\BaseDataItem.csproj">
+      <Project>{ed123fda-f358-4c08-9df1-84d4ed632946}</Project>
+      <Name>BaseDataItem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CFileTransmission\CFileTransmission.csproj">
+      <Project>{d1a8aeb4-8bb9-4582-91a1-c2cca65d78f4}</Project>
+      <Name>CFileTransmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DetectionPlatformBaseData\DetectionPlatformBaseData.csproj">
+      <Project>{f29c50ed-9ac8-49d5-a309-b45700975bf3}</Project>
+      <Name>DetectionPlatformBaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPproduct\ERPproduct.csproj">
+      <Project>{192b81d1-18b5-4f9b-8a00-44c8640f89dc}</Project>
+      <Name>ERPproduct</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPpurchase\ERPpurchase.csproj">
+      <Project>{3ac8ab27-4277-46e5-9b63-a107ac928f91}</Project>
+      <Name>ERPpurchase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPreport\ERPreport.csproj">
+      <Project>{d259d2c2-c499-4dc6-b3fa-67ff36c5e998}</Project>
+      <Name>ERPreport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPStock\ERPStock.csproj">
+      <Project>{8f4cdb2c-d24b-4a7b-b2b7-4471a648d9ee}</Project>
+      <Name>ERPStock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Future\Future.csproj">
+      <Project>{ac7a26d8-0c13-4fa9-be24-e37b8ca614a6}</Project>
+      <Name>Future</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspectionData\ItemInspectionData.csproj">
+      <Project>{b01d448d-8143-41eb-8bbf-bdd638dd14d4}</Project>
+      <Name>ItemInspectionData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspection\ItemInspection.csproj">
+      <Project>{67fba310-912e-4756-a5a6-ec1f23737d9f}</Project>
+      <Name>ItemInspection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MoldMangement\MoldMangement.csproj">
+      <Project>{76393504-a8b2-42d1-93a0-f63a853efde9}</Project>
+      <Name>MoldMangement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OperationalData\OperationalData.csproj">
+      <Project>{fb95174d-0c77-4816-be7a-9a4503dcb4a7}</Project>
+      <Name>OperationalData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCC\PLCC.csproj">
+      <Project>{a47e14c4-9c4b-4e09-8be1-a14109e52a49}</Project>
+      <Name>PLCC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCView\PLCView.csproj">
+      <Project>{373a95a8-1095-44af-bb20-e7f01e998d7a}</Project>
+      <Name>PLCView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sale\ERPSale.csproj">
+      <Project>{7a558a3c-fd9b-4978-91f2-abff247da884}</Project>
+      <Name>ERPSale</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockCore\StockCore.csproj">
+      <Project>{d4497319-a17d-44a0-822d-a62256e83b36}</Project>
+      <Name>StockCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+    <Content Include="Logo.ico" />
+    <EmbeddedResource Include="Resources\dw.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

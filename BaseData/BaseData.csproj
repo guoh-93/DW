@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2C6A2C9-188E-4B9E-9ADC-D28195938D24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseData</RootNamespace>
+    <AssemblyName>BaseData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2.Design, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ERPStock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ERPStock\obj\Debug\ERPStock.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterBaseUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MasterBaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\BIN\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WSAdapter">
+      <HintPath>..\BIN\WSAdapter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fm员工信息列.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm员工信息列.Designer.cs">
+      <DependentUpon>fm员工信息列.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPDM接口.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmPDM接口.Designer.cs">
+      <DependentUpon>frmPDM接口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm人事基础部门维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm人事基础部门维护.Designer.cs">
+      <DependentUpon>frm人事基础部门维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm人员基础分析.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm人员基础分析.Designer.cs">
+      <DependentUpon>frm人员基础分析.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm会议室使用情况查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm会议室使用情况查询.Designer.cs">
+      <DependentUpon>frm会议室使用情况查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm员工信息维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm员工信息维护.Designer.cs">
+      <DependentUpon>frm员工信息维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm员工劳保用品管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm员工劳保用品管理.Designer.cs">
+      <DependentUpon>frm员工劳保用品管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm员工培训导入查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm员工培训导入查询.Designer.cs">
+      <DependentUpon>frm员工培训导入查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm员工奖惩导入查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm员工奖惩导入查询.Designer.cs">
+      <DependentUpon>frm员工奖惩导入查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm员工培训计划导入查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm员工培训计划导入查询.Designer.cs">
+      <DependentUpon>frm员工培训计划导入查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm基础数据基础属性分类维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm基础数据基础属性分类维护.Designer.cs">
+      <DependentUpon>frm基础数据基础属性分类维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm基础数据基础属性维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm基础数据基础属性维护.Designer.cs">
+      <DependentUpon>frm基础数据基础属性维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm基础数据物料类型维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm基础数据物料类型维护.Designer.cs">
+      <DependentUpon>frm基础数据物料类型维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm消息弹框.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm消息弹框.Designer.cs">
+      <DependentUpon>frm消息弹框.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm物料BOM结构多线程.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm物料BOM结构多线程.Designer.cs">
+      <DependentUpon>frm物料BOM结构多线程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm物料BOM结构视图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm物料BOM结构视图.Designer.cs">
+      <DependentUpon>frm物料BOM结构视图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm物料类型维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm物料类型维护.designer.cs">
+      <DependentUpon>frm物料类型维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm部门维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm部门维护.designer.cs">
+      <DependentUpon>frm部门维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ui检验计划.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui检验计划.Designer.cs">
+      <DependentUpon>ui检验计划.cs</DependentUpon>
+    </Compile>
+    <Compile Include="确认界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="确认界面.Designer.cs">
+      <DependentUpon>确认界面.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fm员工信息列.resx">
+      <DependentUpon>fm员工信息列.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPDM接口.resx">
+      <DependentUpon>frmPDM接口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm人事基础部门维护.resx">
+      <DependentUpon>frm人事基础部门维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm人员基础分析.resx">
+      <DependentUpon>frm人员基础分析.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm会议室使用情况查询.resx">
+      <DependentUpon>frm会议室使用情况查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm员工信息维护.resx">
+      <DependentUpon>frm员工信息维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm员工劳保用品管理.resx">
+      <DependentUpon>frm员工劳保用品管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm员工培训导入查询.resx">
+      <DependentUpon>frm员工培训导入查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm员工奖惩导入查询.resx">
+      <DependentUpon>frm员工奖惩导入查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm员工培训计划导入查询.resx">
+      <DependentUpon>frm员工培训计划导入查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm基础数据基础属性分类维护.resx">
+      <DependentUpon>frm基础数据基础属性分类维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm基础数据基础属性维护.resx">
+      <DependentUpon>frm基础数据基础属性维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm基础数据物料类型维护.resx">
+      <DependentUpon>frm基础数据物料类型维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm消息弹框.resx">
+      <DependentUpon>frm消息弹框.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm物料BOM结构多线程.resx">
+      <DependentUpon>frm物料BOM结构多线程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm物料BOM结构视图.resx">
+      <DependentUpon>frm物料BOM结构视图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm物料类型维护.resx">
+      <DependentUpon>frm物料类型维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm部门维护.resx">
+      <DependentUpon>frm部门维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="确认界面.resx">
+      <DependentUpon>确认界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui检验计划.resx">
+      <DependentUpon>ui检验计划.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\interact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseDataItem\BaseDataItem.csproj">
+      <Project>{ed123fda-f358-4c08-9df1-84d4ed632946}</Project>
+      <Name>BaseDataItem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CFileTransmission\CFileTransmission.csproj">
+      <Project>{d1a8aeb4-8bb9-4582-91a1-c2cca65d78f4}</Project>
+      <Name>CFileTransmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockCore\StockCore.csproj">
+      <Project>{d4497319-a17d-44a0-822d-a62256e83b36}</Project>
+      <Name>StockCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326123249863_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fakes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_up_32px_1184719_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_down_32px_1184716_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\see_47.928251121076px_1195253_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_down_32px_1184716_easyicon.net1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_in_32px_549007_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmark_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

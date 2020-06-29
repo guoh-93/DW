@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WSAdapter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WSAdapter_MasterBaseService_MasterBaseService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:10013/MasterBaseService.asmx</Value>
+    </Setting>
+    <Setting Name="WSAdapter_MasterMESWSMain_MESWSMain" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://218.244.150.177:10100/MESWSMain.asmx</Value>
+    </Setting>
+    <Setting Name="WSAdapter_WebReference_DataGEN" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.10.7:5020/DataGEN.asmx</Value>
+    </Setting>
+    <Setting Name="WSAdapter_ERP_fms_MESWSMain" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.2.38:2020/MESWSMain.asmx</Value>
+    </Setting>
+    <Setting Name="WSAdapter_ERP_MO_MESWSMain" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://127.0.0.1/MESWSMain.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

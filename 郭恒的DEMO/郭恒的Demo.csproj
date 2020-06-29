@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E196695E-E249-420C-83FF-467C076DA0D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>郭恒的DEMO</RootNamespace>
+    <AssemblyName>郭恒的DEMO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BaseDataItem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\BaseDataItem.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DemoData.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Tutorials.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="itextsharp, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MasterBaseUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MasterBaseUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PLCView\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.VisualStudio, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PLCView\MySQL.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PLCView\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\NPOI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Spire.Common, Version=1.12.3.6020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spire.XLS.8.12.3\lib\net20\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.20, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spire.XLS.8.12.3\lib\net20\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.12.2.2020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spire.XLS.8.12.3\lib\net20\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=8.12.3.6020, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Spire.XLS.8.12.3\lib\net20\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fmbandedview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmbandedview.Designer.cs">
+      <DependentUpon>fmbandedview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fmU8委外发料.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmU8委外发料.Designer.cs">
+      <DependentUpon>fmU8委外发料.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm校验未入库倒冲物料及数量.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm校验未入库倒冲物料及数量.Designer.cs">
+      <DependentUpon>fm校验未入库倒冲物料及数量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mrp.Designer.cs">
+      <DependentUpon>mrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="printtest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printtest.Designer.cs">
+      <DependentUpon>printtest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sync_u8_借出借用单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sync_u8_借出借用单.Designer.cs">
+      <DependentUpon>sync_u8_借出借用单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="treelist试验.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="treelist试验.Designer.cs">
+      <DependentUpon>treelist试验.cs</DependentUpon>
+    </Compile>
+    <Compile Include="东屋账龄.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="东屋账龄.Designer.cs">
+      <DependentUpon>东屋账龄.cs</DependentUpon>
+    </Compile>
+    <Compile Include="东屋采购池验证.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="东屋采购池验证.Designer.cs">
+      <DependentUpon>东屋采购池验证.cs</DependentUpon>
+    </Compile>
+    <Compile Include="中英文版本.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="中英文版本.Designer.cs">
+      <DependentUpon>中英文版本.cs</DependentUpon>
+    </Compile>
+    <Compile Include="基础属性列转行.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="基础属性列转行.Designer.cs">
+      <DependentUpon>基础属性列转行.cs</DependentUpon>
+    </Compile>
+    <Compile Include="多行复制测试.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="多行复制测试.Designer.cs">
+      <DependentUpon>多行复制测试.cs</DependentUpon>
+    </Compile>
+    <Compile Include="存货核算和成本核算.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="存货核算和成本核算.Designer.cs">
+      <DependentUpon>存货核算和成本核算.cs</DependentUpon>
+    </Compile>
+    <Compile Include="校验码2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="校验码2.Designer.cs">
+      <DependentUpon>校验码2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="检验码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="检验码.Designer.cs">
+      <DependentUpon>检验码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试下拉.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试下拉.Designer.cs">
+      <DependentUpon>测试下拉.cs</DependentUpon>
+    </Compile>
+    <Compile Include="简单加解密.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="简单加解密.Designer.cs">
+      <DependentUpon>简单加解密.cs</DependentUpon>
+    </Compile>
+    <Compile Include="补检验记录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="补检验记录.Designer.cs">
+      <DependentUpon>补检验记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="账龄分析转列.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="账龄分析转列.Designer.cs">
+      <DependentUpon>账龄分析转列.cs</DependentUpon>
+    </Compile>
+    <Compile Include="递归最顶层成品.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="递归最顶层成品.Designer.cs">
+      <DependentUpon>递归最顶层成品.cs</DependentUpon>
+    </Compile>
+    <Compile Include="销售退货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="销售退货.Designer.cs">
+      <DependentUpon>销售退货.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fmbandedview.resx">
+      <DependentUpon>fmbandedview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmU8委外发料.resx">
+      <DependentUpon>fmU8委外发料.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm校验未入库倒冲物料及数量.resx">
+      <DependentUpon>fm校验未入库倒冲物料及数量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mrp.resx">
+      <DependentUpon>mrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="printtest.resx">
+      <DependentUpon>printtest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sync_u8_借出借用单.resx">
+      <DependentUpon>sync_u8_借出借用单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="treelist试验.resx">
+      <DependentUpon>treelist试验.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="东屋账龄.resx">
+      <DependentUpon>东屋账龄.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="东屋采购池验证.resx">
+      <DependentUpon>东屋采购池验证.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="中英文版本.en.resx">
+      <DependentUpon>中英文版本.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="中英文版本.resx">
+      <DependentUpon>中英文版本.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="中英文版本.zh-Hans.resx">
+      <DependentUpon>中英文版本.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="基础属性列转行.resx">
+      <DependentUpon>基础属性列转行.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="多行复制测试.resx">
+      <DependentUpon>多行复制测试.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="存货核算和成本核算.resx">
+      <DependentUpon>存货核算和成本核算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="校验码2.resx">
+      <DependentUpon>校验码2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="检验码.resx">
+      <DependentUpon>检验码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试下拉.resx">
+      <DependentUpon>测试下拉.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="简单加解密.resx">
+      <DependentUpon>简单加解密.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="补检验记录.resx">
+      <DependentUpon>补检验记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="账龄分析转列.resx">
+      <DependentUpon>账龄分析转列.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="递归最顶层成品.resx">
+      <DependentUpon>递归最顶层成品.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="销售退货.resx">
+      <DependentUpon>销售退货.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\approval\approval.csproj">
+      <Project>{562f4489-14cf-4688-be97-0408baa8b7fd}</Project>
+      <Name>approval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BaseData\BaseData.csproj">
+      <Project>{B2C6A2C9-188E-4B9E-9ADC-D28195938D24}</Project>
+      <Name>BaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CFileTransmission\CFileTransmission.csproj">
+      <Project>{d1a8aeb4-8bb9-4582-91a1-c2cca65d78f4}</Project>
+      <Name>CFileTransmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPproduct\ERPproduct.csproj">
+      <Project>{192b81d1-18b5-4f9b-8a00-44c8640f89dc}</Project>
+      <Name>ERPproduct</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IAACA\IAACA.csproj">
+      <Project>{c08f4aed-cde8-4646-be2d-5d179b868529}</Project>
+      <Name>IAACA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspection\ItemInspection.csproj">
+      <Project>{67fba310-912e-4756-a5a6-ec1f23737d9f}</Project>
+      <Name>ItemInspection</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterStart\MasterStart.csproj">
+      <Project>{bed166d2-0b41-42e8-8753-46f60250dbe2}</Project>
+      <Name>MasterStart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockCore\StockCore.csproj">
+      <Project>{d4497319-a17d-44a0-822d-a62256e83b36}</Project>
+      <Name>StockCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WSAdapter\WSAdapter.csproj">
+      <Project>{7a94c20e-559a-4b6c-bf45-09c5b7fa46e5}</Project>
+      <Name>WSAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="LabelManager2">
+      <Guid>{3624B9C2-9E5D-11D3-A896-00C04F324E22}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>99</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1765702B-AF64-4E00-8F30-C0F4EC548E3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReworkMould</RootNamespace>
+    <AssemblyName>ReworkMould</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fm拆分采购需求单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm拆分采购需求单.Designer.cs">
+      <DependentUpon>fm拆分采购需求单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mps_采购需求查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mps_采购需求查询.Designer.cs">
+      <DependentUpon>mps_采购需求查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_生产子项.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_生产子项.Designer.cs">
+      <DependentUpon>ui_生产子项.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_生产池_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_生产池_1.Designer.cs">
+      <DependentUpon>ui_生产池_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_生产计划.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_生产计划.Designer.cs">
+      <DependentUpon>ui_生产计划.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_计划池转制令.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_计划池转制令.Designer.cs">
+      <DependentUpon>ui_计划池转制令.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_计划生成单查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_计划生成单查询.Designer.cs">
+      <DependentUpon>ui_计划生成单查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_计划通知单查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_计划通知单查询.Designer.cs">
+      <DependentUpon>ui_计划通知单查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_计划采购需求.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_计划采购需求.Designer.cs">
+      <DependentUpon>ui_计划采购需求.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_选择关联销售单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_选择关联销售单.Designer.cs">
+      <DependentUpon>ui_选择关联销售单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_采购子项.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_采购子项.Designer.cs">
+      <DependentUpon>ui_采购子项.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_采购计划.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_采购计划.Designer.cs">
+      <DependentUpon>ui_采购计划.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_采购需求.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_采购需求.Designer.cs">
+      <DependentUpon>ui_采购需求.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_驳回记录查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_驳回记录查询.Designer.cs">
+      <DependentUpon>ui_驳回记录查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui主计划生成单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui主计划生成单.Designer.cs">
+      <DependentUpon>ui主计划生成单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui返工退料清单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui返工退料清单.Designer.cs">
+      <DependentUpon>ui返工退料清单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui返工申请.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui返工申请.Designer.cs">
+      <DependentUpon>ui返工申请.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui返工申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui返工申请查询.Designer.cs">
+      <DependentUpon>ui返工申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主计划查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="主计划查询.Designer.cs">
+      <DependentUpon>主计划查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="主计划池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="主计划池.Designer.cs">
+      <DependentUpon>主计划池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="修改预计到货日期.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改预计到货日期.Designer.cs">
+      <DependentUpon>修改预计到货日期.cs</DependentUpon>
+    </Compile>
+    <Compile Include="填写暂不采购原因.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="填写暂不采购原因.Designer.cs">
+      <DependentUpon>填写暂不采购原因.cs</DependentUpon>
+    </Compile>
+    <Compile Include="未勾选采购池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="未勾选采购池.Designer.cs">
+      <DependentUpon>未勾选采购池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="生产计划池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="生产计划池.Designer.cs">
+      <DependentUpon>生产计划池.cs</DependentUpon>
+    </Compile>
+    <Compile Include="采购计划池.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="采购计划池.Designer.cs">
+      <DependentUpon>采购计划池.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fm拆分采购需求单.resx">
+      <DependentUpon>fm拆分采购需求单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mps_采购需求查询.resx">
+      <DependentUpon>mps_采购需求查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ui_生产子项.resx">
+      <DependentUpon>ui_生产子项.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_生产池_1.resx">
+      <DependentUpon>ui_生产池_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_生产计划.resx">
+      <DependentUpon>ui_生产计划.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_计划池转制令.resx">
+      <DependentUpon>ui_计划池转制令.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_计划生成单查询.resx">
+      <DependentUpon>ui_计划生成单查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_计划通知单查询.resx">
+      <DependentUpon>ui_计划通知单查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_计划采购需求.resx">
+      <DependentUpon>ui_计划采购需求.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_选择关联销售单.resx">
+      <DependentUpon>ui_选择关联销售单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_采购子项.resx">
+      <DependentUpon>ui_采购子项.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_采购计划.resx">
+      <DependentUpon>ui_采购计划.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_采购需求.resx">
+      <DependentUpon>ui_采购需求.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_驳回记录查询.resx">
+      <DependentUpon>ui_驳回记录查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui主计划生成单.resx">
+      <DependentUpon>ui主计划生成单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui返工退料清单.resx">
+      <DependentUpon>ui返工退料清单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui返工申请.resx">
+      <DependentUpon>ui返工申请.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui返工申请查询.resx">
+      <DependentUpon>ui返工申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主计划查询.resx">
+      <DependentUpon>主计划查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主计划池.resx">
+      <DependentUpon>主计划池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修改预计到货日期.resx">
+      <DependentUpon>修改预计到货日期.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="填写暂不采购原因.resx">
+      <DependentUpon>填写暂不采购原因.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="未勾选采购池.resx">
+      <DependentUpon>未勾选采购池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="生产计划池.resx">
+      <DependentUpon>生产计划池.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="采购计划池.resx">
+      <DependentUpon>采购计划池.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterStart\MasterStart.csproj">
+      <Project>{bed166d2-0b41-42e8-8753-46f60250dbe2}</Project>
+      <Name>MasterStart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser_32px_26872_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ERPproduct\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator_32px_1189283_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{373A95A8-1095-44AF-BB20-E7F01E998D7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PLCView</RootNamespace>
+    <AssemblyName>PLCView</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.VisualStudio">
+      <HintPath>.\MySQL.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web">
+      <HintPath>.\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CABBDATASaveDEMO.cs" />
+    <Compile Include="fm临时数据上传界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fm临时数据上传界面.Designer.cs">
+      <DependentUpon>fm临时数据上传界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm动作错误日志.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm动作错误日志.Designer.cs">
+      <DependentUpon>fm动作错误日志.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm检测结果详细.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm检测结果详细.Designer.cs">
+      <DependentUpon>fm检测结果详细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm6W.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm6W.Designer.cs">
+      <DependentUpon>frm6W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm6WMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm6WMain.Designer.cs">
+      <DependentUpon>frm6WMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmABB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmABB.Designer.cs">
+      <DependentUpon>frmABB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm不合格品信息.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm不合格品信息.Designer.cs">
+      <DependentUpon>frm不合格品信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm时间数据视图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm时间数据视图.Designer.cs">
+      <DependentUpon>frm时间数据视图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm检测数据视图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm检测数据视图.Designer.cs">
+      <DependentUpon>frm检测数据视图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm组队机台查看.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm组队机台查看.Designer.cs">
+      <DependentUpon>frm组队机台查看.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm检测机台表维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm检测机台表维护.Designer.cs">
+      <DependentUpon>frm检测机台表维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm检测结果.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm检测结果.Designer.cs">
+      <DependentUpon>frm检测结果.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm缩略视图查看.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm缩略视图查看.Designer.cs">
+      <DependentUpon>frm缩略视图查看.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm自动检测数据.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm自动检测数据.designer.cs">
+      <DependentUpon>frm自动检测数据.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_AutomaticDetectionData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="uitemp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uitemp.Designer.cs">
+      <DependentUpon>uitemp.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fm临时数据上传界面.resx">
+      <DependentUpon>fm临时数据上传界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm动作错误日志.resx">
+      <DependentUpon>fm动作错误日志.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm检测结果详细.resx">
+      <DependentUpon>fm检测结果详细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm6W.resx">
+      <DependentUpon>frm6W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm6WMain.resx">
+      <DependentUpon>frm6WMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABB.resx">
+      <DependentUpon>frmABB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm不合格品信息.resx">
+      <DependentUpon>frm不合格品信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm时间数据视图.resx">
+      <DependentUpon>frm时间数据视图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm检测数据视图.resx">
+      <DependentUpon>frm检测数据视图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm检测机台表维护.resx">
+      <DependentUpon>frm检测机台表维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm检测结果.resx">
+      <DependentUpon>frm检测结果.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm组队机台查看.resx">
+      <DependentUpon>frm组队机台查看.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm缩略视图查看.resx">
+      <DependentUpon>frm缩略视图查看.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm自动检测数据.resx">
+      <DependentUpon>frm自动检测数据.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="uitemp.resx">
+      <DependentUpon>uitemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PLCC\PLCC.csproj">
+      <Project>{a47e14c4-9c4b-4e09-8be1-a14109e52a49}</Project>
+      <Name>PLCC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resource\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_replace_24px_1181872_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1186688.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\583310.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1682.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

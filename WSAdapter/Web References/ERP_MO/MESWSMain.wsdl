@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://MasterERP.cn/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://MasterERP.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MasterERP.cn/">
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetEXSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_ERPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetData_ERPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData_ERPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetEXSQL_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQL_ERPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQL_ERPResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_销售明细">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_销售明细Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_销售明细Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_lld">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="drr">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="s_id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_llrID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_llrname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_gdfzrID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="s_gdfzrname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_待领料单号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_lldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_lldResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_四个量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtx">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_四个量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_四个量Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pdesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckAuthorityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_PingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData_ERP" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetData_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetData_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData_ERP" />
+  </wsdl:message>
+  <wsdl:message name="SetData_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:SetData_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_ERP" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_销售明细" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_销售明细Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_lldSoapIn">
+    <wsdl:part name="parameters" element="tns:fun_lld" />
+  </wsdl:message>
+  <wsdl:message name="fun_lldSoapOut">
+    <wsdl:part name="parameters" element="tns:fun_lldResponse" />
+  </wsdl:message>
+  <wsdl:message name="fun_四个量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_四个量" />
+  </wsdl:message>
+  <wsdl:message name="fun_四个量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_四个量Response" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAuthority" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Ping" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细HttpGetIn">
+    <wsdl:part name="str_sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pdesc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpGetIn">
+    <wsdl:part name="PingID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细HttpPostIn">
+    <wsdl:part name="str_sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_销售明细HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pdesc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpPostIn">
+    <wsdl:part name="PingID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:portType name="MESWSMainSoap">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input message="tns:SetDataSoapIn" />
+      <wsdl:output message="tns:SetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLSoapIn" />
+      <wsdl:output message="tns:SetEXSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPSoapIn" />
+      <wsdl:output message="tns:GetData_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <wsdl:input message="tns:SetData_ERPSoapIn" />
+      <wsdl:output message="tns:SetData_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPSoapIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <wsdl:input message="tns:fun_销售明细SoapIn" />
+      <wsdl:output message="tns:fun_销售明细SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_lld">
+      <wsdl:input message="tns:fun_lldSoapIn" />
+      <wsdl:output message="tns:fun_lldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_四个量">
+      <wsdl:input message="tns:fun_四个量SoapIn" />
+      <wsdl:output message="tns:fun_四个量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthoritySoapIn" />
+      <wsdl:output message="tns:CheckAuthoritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingSoapIn" />
+      <wsdl:output message="tns:WS_PingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MESWSMainHttpGet">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpGetIn" />
+      <wsdl:output message="tns:GetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPHttpGetIn" />
+      <wsdl:output message="tns:GetData_ERPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <wsdl:input message="tns:fun_销售明细HttpGetIn" />
+      <wsdl:output message="tns:fun_销售明细HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthorityHttpGetIn" />
+      <wsdl:output message="tns:CheckAuthorityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingHttpGetIn" />
+      <wsdl:output message="tns:WS_PingHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MESWSMainHttpPost">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpPostIn" />
+      <wsdl:output message="tns:GetDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPHttpPostIn" />
+      <wsdl:output message="tns:GetData_ERPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <wsdl:input message="tns:fun_销售明细HttpPostIn" />
+      <wsdl:output message="tns:fun_销售明细HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthorityHttpPostIn" />
+      <wsdl:output message="tns:CheckAuthorityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingHttpPostIn" />
+      <wsdl:output message="tns:WS_PingHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MESWSMainSoap" type="tns:MESWSMainSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://MasterERP.cn/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://MasterERP.cn/SetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap:operation soapAction="http://MasterERP.cn/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <soap:operation soapAction="http://MasterERP.cn/GetData_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <soap:operation soapAction="http://MasterERP.cn/SetData_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <soap:operation soapAction="http://MasterERP.cn/SetEXSQL_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <soap:operation soapAction="http://MasterERP.cn/fun_销售明细" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_lld">
+      <soap:operation soapAction="http://MasterERP.cn/fun_lld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_四个量">
+      <soap:operation soapAction="http://MasterERP.cn/fun_四个量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <soap:operation soapAction="http://MasterERP.cn/CheckAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <soap:operation soapAction="http://MasterERP.cn/WS_Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainSoap12" type="tns:MESWSMainSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://MasterERP.cn/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap12:operation soapAction="http://MasterERP.cn/SetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap12:operation soapAction="http://MasterERP.cn/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <soap12:operation soapAction="http://MasterERP.cn/GetData_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <soap12:operation soapAction="http://MasterERP.cn/SetData_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <soap12:operation soapAction="http://MasterERP.cn/SetEXSQL_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <soap12:operation soapAction="http://MasterERP.cn/fun_销售明细" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_lld">
+      <soap12:operation soapAction="http://MasterERP.cn/fun_lld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_四个量">
+      <soap12:operation soapAction="http://MasterERP.cn/fun_四个量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <soap12:operation soapAction="http://MasterERP.cn/CheckAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <soap12:operation soapAction="http://MasterERP.cn/WS_Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainHttpGet" type="tns:MESWSMainHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <http:operation location="/GetData_ERP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <http:operation location="/SetEXSQL_ERP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <http:operation location="/fun_销售明细" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <http:operation location="/CheckAuthority" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <http:operation location="/WS_Ping" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainHttpPost" type="tns:MESWSMainHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <http:operation location="/GetData_ERP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <http:operation location="/SetEXSQL_ERP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_销售明细">
+      <http:operation location="/fun_销售明细" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <http:operation location="/CheckAuthority" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <http:operation location="/WS_Ping" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MESWSMain">
+    <wsdl:port name="MESWSMainSoap" binding="tns:MESWSMainSoap">
+      <soap:address location="http://127.0.0.1/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainSoap12" binding="tns:MESWSMainSoap12">
+      <soap12:address location="http://127.0.0.1/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainHttpGet" binding="tns:MESWSMainHttpGet">
+      <http:address location="http://127.0.0.1/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainHttpPost" binding="tns:MESWSMainHttpPost">
+      <http:address location="http://127.0.0.1/MESWSMain.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

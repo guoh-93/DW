@@ -1,0 +1,2744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://MasterMES.cn/ws1" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://MasterMES.cn/ws1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MasterMES.cn/ws1">
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_Conn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_ConnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetData_ConnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetData_conn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData_connResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetEXSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQL_conn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQL_connResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQL_connResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData_ERPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetData_ERPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData_ERPResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetEXSQL_ERP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQL_ERPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQL_ERPResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_发送流转卡">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_发送流转卡Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_流转卡函数_发送流转卡Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_字段说明">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_流转卡函数_字段说明Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_流转卡函数_字段说明Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_流转卡状态">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_流转卡状态Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_流转卡函数_流转卡状态Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_开工日报">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str软件系统用户" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str工序操作员" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMachine" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="POS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="step" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_开工日报Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_流转卡函数_开工日报Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_完工日报">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Number" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_完工日报Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_流转卡函数_完工日报Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_不合格日报">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtP">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_不合格日报Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_流转卡函数_不合格日报Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_质量日报">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_质量日报Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_流转卡函数_质量日报Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_检验工序_质量日报">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_流转卡函数_检验工序_质量日报Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fun_流转卡函数_检验工序_质量日报Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pdesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckAuthorityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PingID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WS_PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WS_PingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_Init初始化仓库物料">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_Init初始化仓库物料Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_初始化仓库物料表">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_初始化仓库物料表Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_初始化物料数量表">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_初始化物料数量表Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_初始化物料数量表_历史">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_初始化物料数量表_历史Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_物料数量_实际数量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Refresh" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_实际数量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_物料数量_实际数量Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_在途量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Refresh" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_在途量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_物料数量_在途量Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_在制量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Refresh" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_在制量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_物料数量_在制量Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_受订单">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Refresh" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_受订单Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_物料数量_受订单Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_末领量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Refresh" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_物料数量_末领量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_物料数量_末领量Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_出入库_采购入库">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_出入库_采购入库Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_出入库_成品入库">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_出入库_成品入库Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_出入库_成品出库">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_出入库_成品出库Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_出入库_领料出库">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_出入库_领料出库Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="fun_仓库物料数量_库存总量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_仓库物料数量_库存总量Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fun_仓库物料数量_库存总量Result" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_仓库物料_库存总量">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_ItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strconn" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_库位号" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fun_仓库物料_库存总量Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="decimal" type="s:decimal" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData_Conn" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnSoapOut">
+    <wsdl:part name="parameters" element="tns:GetData_ConnResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetData_connSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData_conn" />
+  </wsdl:message>
+  <wsdl:message name="SetData_connSoapOut">
+    <wsdl:part name="parameters" element="tns:SetData_connResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_conn" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_connResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData_ERP" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetData_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetData_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData_ERP" />
+  </wsdl:message>
+  <wsdl:message name="SetData_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:SetData_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_ERP" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQL_ERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_发送流转卡" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_发送流转卡Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_字段说明SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_字段说明" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_字段说明SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_字段说明Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_流转卡状态" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_流转卡状态Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_开工日报" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_开工日报Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_完工日报" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_完工日报Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_不合格日报SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_不合格日报" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_不合格日报SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_不合格日报Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_质量日报" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_质量日报Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_检验工序_质量日报" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_流转卡函数_检验工序_质量日报Response" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:CheckAuthority" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:CheckAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingSoapIn">
+    <wsdl:part name="parameters" element="tns:WS_Ping" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingSoapOut">
+    <wsdl:part name="parameters" element="tns:WS_PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_Init初始化仓库物料" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_Init初始化仓库物料Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化仓库物料表SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_初始化仓库物料表" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化仓库物料表SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_初始化仓库物料表Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_初始化物料数量表" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_初始化物料数量表Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表_历史SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_初始化物料数量表_历史" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表_历史SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_初始化物料数量表_历史Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_实际数量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_实际数量" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_实际数量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_实际数量Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_在途量" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_在途量Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_在制量" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_在制量Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_受订单" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_受订单Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_末领量" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_物料数量_末领量Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_出入库_采购入库" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_出入库_采购入库Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品入库SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_出入库_成品入库" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品入库SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_出入库_成品入库Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品出库SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_出入库_成品出库" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品出库SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_出入库_成品出库Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_领料出库SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_出入库_领料出库" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_领料出库SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_出入库_领料出库Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料数量_库存总量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_仓库物料数量_库存总量" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料数量_库存总量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_仓库物料数量_库存总量Response" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量SoapIn">
+    <wsdl:part name="parameters" element="tns:fun_仓库物料_库存总量" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量SoapOut">
+    <wsdl:part name="parameters" element="tns:fun_仓库物料_库存总量Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡HttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_字段说明HttpGetIn" />
+  <wsdl:message name="fun_流转卡函数_字段说明HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="str软件系统用户" type="s:string" />
+    <wsdl:part name="str工序操作员" type="s:string" />
+    <wsdl:part name="strMachine" type="s:string" />
+    <wsdl:part name="POS" type="s:string" />
+    <wsdl:part name="step" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报HttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="Number" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报HttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报HttpGetIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报HttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pdesc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpGetIn">
+    <wsdl:part name="PingID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料HttpGetIn">
+    <wsdl:part name="str_库位号" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料HttpGetOut" />
+  <wsdl:message name="fun_初始化仓库物料表HttpGetIn">
+    <wsdl:part name="str_库位号" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化仓库物料表HttpGetOut" />
+  <wsdl:message name="fun_初始化物料数量表HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表HttpGetOut" />
+  <wsdl:message name="fun_初始化物料数量表_历史HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表_历史HttpGetOut" />
+  <wsdl:message name="fun_物料数量_实际数量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_实际数量HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库HttpGetOut" />
+  <wsdl:message name="fun_出入库_成品入库HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品入库HttpGetOut" />
+  <wsdl:message name="fun_出入库_成品出库HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品出库HttpGetOut" />
+  <wsdl:message name="fun_出入库_领料出库HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_领料出库HttpGetOut" />
+  <wsdl:message name="fun_仓库物料数量_库存总量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料数量_库存总量HttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量HttpGetIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量HttpGetOut" />
+  <wsdl:message name="GetDataHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ConnHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_connHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetData_ERPHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQL_ERPHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_发送流转卡HttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_字段说明HttpPostIn" />
+  <wsdl:message name="fun_流转卡函数_字段说明HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_流转卡状态HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="str软件系统用户" type="s:string" />
+    <wsdl:part name="str工序操作员" type="s:string" />
+    <wsdl:part name="strMachine" type="s:string" />
+    <wsdl:part name="POS" type="s:string" />
+    <wsdl:part name="step" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_开工日报HttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="Number" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_完工日报HttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_质量日报HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报HttpPostIn">
+    <wsdl:part name="strMO" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_流转卡函数_检验工序_质量日报HttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="Pdesc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckAuthorityHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpPostIn">
+    <wsdl:part name="PingID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WS_PingHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料HttpPostIn">
+    <wsdl:part name="str_库位号" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_Init初始化仓库物料HttpPostOut" />
+  <wsdl:message name="fun_初始化仓库物料表HttpPostIn">
+    <wsdl:part name="str_库位号" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化仓库物料表HttpPostOut" />
+  <wsdl:message name="fun_初始化物料数量表HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表HttpPostOut" />
+  <wsdl:message name="fun_初始化物料数量表_历史HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_初始化物料数量表_历史HttpPostOut" />
+  <wsdl:message name="fun_物料数量_实际数量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_实际数量HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在途量HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_在制量HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_受订单HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="Refresh" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_物料数量_末领量HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_采购入库HttpPostOut" />
+  <wsdl:message name="fun_出入库_成品入库HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品入库HttpPostOut" />
+  <wsdl:message name="fun_出入库_成品出库HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_成品出库HttpPostOut" />
+  <wsdl:message name="fun_出入库_领料出库HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_出入库_领料出库HttpPostOut" />
+  <wsdl:message name="fun_仓库物料数量_库存总量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料数量_库存总量HttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量HttpPostIn">
+    <wsdl:part name="str_ItemNo" type="s:string" />
+    <wsdl:part name="strconn" type="s:string" />
+    <wsdl:part name="Qty" type="s:string" />
+    <wsdl:part name="TransactionName" type="s:string" />
+    <wsdl:part name="str_库位号" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fun_仓库物料_库存总量HttpPostOut" />
+  <wsdl:portType name="MESWSMainSoap">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <wsdl:input message="tns:GetData_ConnSoapIn" />
+      <wsdl:output message="tns:GetData_ConnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input message="tns:SetDataSoapIn" />
+      <wsdl:output message="tns:SetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData_conn">
+      <wsdl:input message="tns:SetData_connSoapIn" />
+      <wsdl:output message="tns:SetData_connSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLSoapIn" />
+      <wsdl:output message="tns:SetEXSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <wsdl:input message="tns:SetEXSQL_connSoapIn" />
+      <wsdl:output message="tns:SetEXSQL_connSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPSoapIn" />
+      <wsdl:output message="tns:GetData_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <wsdl:input message="tns:SetData_ERPSoapIn" />
+      <wsdl:output message="tns:SetData_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPSoapIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <wsdl:input message="tns:fun_流转卡函数_发送流转卡SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_发送流转卡SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <wsdl:input message="tns:fun_流转卡函数_字段说明SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_字段说明SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <wsdl:input message="tns:fun_流转卡函数_流转卡状态SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_流转卡状态SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <wsdl:input message="tns:fun_流转卡函数_开工日报SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_开工日报SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <wsdl:input message="tns:fun_流转卡函数_完工日报SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_完工日报SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_不合格日报">
+      <wsdl:input message="tns:fun_流转卡函数_不合格日报SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_不合格日报SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_质量日报SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_质量日报SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_检验工序_质量日报SoapIn" />
+      <wsdl:output message="tns:fun_流转卡函数_检验工序_质量日报SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthoritySoapIn" />
+      <wsdl:output message="tns:CheckAuthoritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingSoapIn" />
+      <wsdl:output message="tns:WS_PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <wsdl:input message="tns:fun_Init初始化仓库物料SoapIn" />
+      <wsdl:output message="tns:fun_Init初始化仓库物料SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <wsdl:input message="tns:fun_初始化仓库物料表SoapIn" />
+      <wsdl:output message="tns:fun_初始化仓库物料表SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <wsdl:input message="tns:fun_初始化物料数量表SoapIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <wsdl:input message="tns:fun_初始化物料数量表_历史SoapIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表_历史SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <wsdl:input message="tns:fun_物料数量_实际数量SoapIn" />
+      <wsdl:output message="tns:fun_物料数量_实际数量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <wsdl:input message="tns:fun_物料数量_在途量SoapIn" />
+      <wsdl:output message="tns:fun_物料数量_在途量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <wsdl:input message="tns:fun_物料数量_在制量SoapIn" />
+      <wsdl:output message="tns:fun_物料数量_在制量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <wsdl:input message="tns:fun_物料数量_受订单SoapIn" />
+      <wsdl:output message="tns:fun_物料数量_受订单SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <wsdl:input message="tns:fun_物料数量_末领量SoapIn" />
+      <wsdl:output message="tns:fun_物料数量_末领量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <wsdl:input message="tns:fun_出入库_采购入库SoapIn" />
+      <wsdl:output message="tns:fun_出入库_采购入库SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <wsdl:input message="tns:fun_出入库_成品入库SoapIn" />
+      <wsdl:output message="tns:fun_出入库_成品入库SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <wsdl:input message="tns:fun_出入库_成品出库SoapIn" />
+      <wsdl:output message="tns:fun_出入库_成品出库SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <wsdl:input message="tns:fun_出入库_领料出库SoapIn" />
+      <wsdl:output message="tns:fun_出入库_领料出库SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <wsdl:input message="tns:fun_仓库物料数量_库存总量SoapIn" />
+      <wsdl:output message="tns:fun_仓库物料数量_库存总量SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <wsdl:input message="tns:fun_仓库物料_库存总量SoapIn" />
+      <wsdl:output message="tns:fun_仓库物料_库存总量SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MESWSMainHttpGet">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpGetIn" />
+      <wsdl:output message="tns:GetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <wsdl:input message="tns:GetData_ConnHttpGetIn" />
+      <wsdl:output message="tns:GetData_ConnHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <wsdl:input message="tns:SetEXSQL_connHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQL_connHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPHttpGetIn" />
+      <wsdl:output message="tns:GetData_ERPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <wsdl:input message="tns:fun_流转卡函数_发送流转卡HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_发送流转卡HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <wsdl:input message="tns:fun_流转卡函数_字段说明HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_字段说明HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <wsdl:input message="tns:fun_流转卡函数_流转卡状态HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_流转卡状态HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <wsdl:input message="tns:fun_流转卡函数_开工日报HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_开工日报HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <wsdl:input message="tns:fun_流转卡函数_完工日报HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_完工日报HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_质量日报HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_质量日报HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_检验工序_质量日报HttpGetIn" />
+      <wsdl:output message="tns:fun_流转卡函数_检验工序_质量日报HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthorityHttpGetIn" />
+      <wsdl:output message="tns:CheckAuthorityHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingHttpGetIn" />
+      <wsdl:output message="tns:WS_PingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <wsdl:input message="tns:fun_Init初始化仓库物料HttpGetIn" />
+      <wsdl:output message="tns:fun_Init初始化仓库物料HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <wsdl:input message="tns:fun_初始化仓库物料表HttpGetIn" />
+      <wsdl:output message="tns:fun_初始化仓库物料表HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <wsdl:input message="tns:fun_初始化物料数量表HttpGetIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <wsdl:input message="tns:fun_初始化物料数量表_历史HttpGetIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表_历史HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <wsdl:input message="tns:fun_物料数量_实际数量HttpGetIn" />
+      <wsdl:output message="tns:fun_物料数量_实际数量HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <wsdl:input message="tns:fun_物料数量_在途量HttpGetIn" />
+      <wsdl:output message="tns:fun_物料数量_在途量HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <wsdl:input message="tns:fun_物料数量_在制量HttpGetIn" />
+      <wsdl:output message="tns:fun_物料数量_在制量HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <wsdl:input message="tns:fun_物料数量_受订单HttpGetIn" />
+      <wsdl:output message="tns:fun_物料数量_受订单HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <wsdl:input message="tns:fun_物料数量_末领量HttpGetIn" />
+      <wsdl:output message="tns:fun_物料数量_末领量HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <wsdl:input message="tns:fun_出入库_采购入库HttpGetIn" />
+      <wsdl:output message="tns:fun_出入库_采购入库HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <wsdl:input message="tns:fun_出入库_成品入库HttpGetIn" />
+      <wsdl:output message="tns:fun_出入库_成品入库HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <wsdl:input message="tns:fun_出入库_成品出库HttpGetIn" />
+      <wsdl:output message="tns:fun_出入库_成品出库HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <wsdl:input message="tns:fun_出入库_领料出库HttpGetIn" />
+      <wsdl:output message="tns:fun_出入库_领料出库HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <wsdl:input message="tns:fun_仓库物料数量_库存总量HttpGetIn" />
+      <wsdl:output message="tns:fun_仓库物料数量_库存总量HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <wsdl:input message="tns:fun_仓库物料_库存总量HttpGetIn" />
+      <wsdl:output message="tns:fun_仓库物料_库存总量HttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MESWSMainHttpPost">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpPostIn" />
+      <wsdl:output message="tns:GetDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <wsdl:input message="tns:GetData_ConnHttpPostIn" />
+      <wsdl:output message="tns:GetData_ConnHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <wsdl:input message="tns:SetEXSQL_connHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQL_connHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <wsdl:input message="tns:GetData_ERPHttpPostIn" />
+      <wsdl:output message="tns:GetData_ERPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <wsdl:input message="tns:SetEXSQL_ERPHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQL_ERPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <wsdl:input message="tns:fun_流转卡函数_发送流转卡HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_发送流转卡HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <wsdl:input message="tns:fun_流转卡函数_字段说明HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_字段说明HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <wsdl:input message="tns:fun_流转卡函数_流转卡状态HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_流转卡状态HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <wsdl:input message="tns:fun_流转卡函数_开工日报HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_开工日报HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <wsdl:input message="tns:fun_流转卡函数_完工日报HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_完工日报HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_质量日报HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_质量日报HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <wsdl:input message="tns:fun_流转卡函数_检验工序_质量日报HttpPostIn" />
+      <wsdl:output message="tns:fun_流转卡函数_检验工序_质量日报HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <wsdl:input message="tns:CheckAuthorityHttpPostIn" />
+      <wsdl:output message="tns:CheckAuthorityHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <wsdl:input message="tns:WS_PingHttpPostIn" />
+      <wsdl:output message="tns:WS_PingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <wsdl:input message="tns:fun_Init初始化仓库物料HttpPostIn" />
+      <wsdl:output message="tns:fun_Init初始化仓库物料HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <wsdl:input message="tns:fun_初始化仓库物料表HttpPostIn" />
+      <wsdl:output message="tns:fun_初始化仓库物料表HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <wsdl:input message="tns:fun_初始化物料数量表HttpPostIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <wsdl:input message="tns:fun_初始化物料数量表_历史HttpPostIn" />
+      <wsdl:output message="tns:fun_初始化物料数量表_历史HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <wsdl:input message="tns:fun_物料数量_实际数量HttpPostIn" />
+      <wsdl:output message="tns:fun_物料数量_实际数量HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <wsdl:input message="tns:fun_物料数量_在途量HttpPostIn" />
+      <wsdl:output message="tns:fun_物料数量_在途量HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <wsdl:input message="tns:fun_物料数量_在制量HttpPostIn" />
+      <wsdl:output message="tns:fun_物料数量_在制量HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <wsdl:input message="tns:fun_物料数量_受订单HttpPostIn" />
+      <wsdl:output message="tns:fun_物料数量_受订单HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <wsdl:input message="tns:fun_物料数量_末领量HttpPostIn" />
+      <wsdl:output message="tns:fun_物料数量_末领量HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <wsdl:input message="tns:fun_出入库_采购入库HttpPostIn" />
+      <wsdl:output message="tns:fun_出入库_采购入库HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <wsdl:input message="tns:fun_出入库_成品入库HttpPostIn" />
+      <wsdl:output message="tns:fun_出入库_成品入库HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <wsdl:input message="tns:fun_出入库_成品出库HttpPostIn" />
+      <wsdl:output message="tns:fun_出入库_成品出库HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <wsdl:input message="tns:fun_出入库_领料出库HttpPostIn" />
+      <wsdl:output message="tns:fun_出入库_领料出库HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <wsdl:input message="tns:fun_仓库物料数量_库存总量HttpPostIn" />
+      <wsdl:output message="tns:fun_仓库物料数量_库存总量HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <wsdl:input message="tns:fun_仓库物料_库存总量HttpPostIn" />
+      <wsdl:output message="tns:fun_仓库物料_库存总量HttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MESWSMainSoap" type="tns:MESWSMainSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/GetData_Conn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_conn">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetData_conn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL_conn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/GetData_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetData_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL_ERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_发送流转卡" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_字段说明" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_流转卡状态" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_开工日报" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_完工日报" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_不合格日报">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_不合格日报" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_质量日报" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_检验工序_质量日报" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/CheckAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/WS_Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_Init初始化仓库物料" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_初始化仓库物料表" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_初始化物料数量表" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_初始化物料数量表_历史" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_实际数量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_在途量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_在制量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_受订单" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_末领量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_采购入库" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_成品入库" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_成品出库" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_领料出库" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_仓库物料数量_库存总量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <soap:operation soapAction="http://MasterMES.cn/ws1/fun_仓库物料_库存总量" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainSoap12" type="tns:MESWSMainSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/GetData_Conn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_conn">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetData_conn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL_conn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/GetData_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData_ERP">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetData_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/SetEXSQL_ERP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_发送流转卡" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_字段说明" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_流转卡状态" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_开工日报" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_完工日报" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_不合格日报">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_不合格日报" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_质量日报" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_流转卡函数_检验工序_质量日报" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/CheckAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/WS_Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_Init初始化仓库物料" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_初始化仓库物料表" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_初始化物料数量表" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_初始化物料数量表_历史" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_实际数量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_在途量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_在制量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_受订单" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_物料数量_末领量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_采购入库" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_成品入库" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_成品出库" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_出入库_领料出库" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_仓库物料数量_库存总量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <soap12:operation soapAction="http://MasterMES.cn/ws1/fun_仓库物料_库存总量" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainHttpGet" type="tns:MESWSMainHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <http:operation location="/GetData_Conn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <http:operation location="/SetEXSQL_conn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <http:operation location="/GetData_ERP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <http:operation location="/SetEXSQL_ERP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <http:operation location="/fun_流转卡函数_发送流转卡" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <http:operation location="/fun_流转卡函数_字段说明" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <http:operation location="/fun_流转卡函数_流转卡状态" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <http:operation location="/fun_流转卡函数_开工日报" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <http:operation location="/fun_流转卡函数_完工日报" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <http:operation location="/fun_流转卡函数_质量日报" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <http:operation location="/fun_流转卡函数_检验工序_质量日报" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <http:operation location="/CheckAuthority" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <http:operation location="/WS_Ping" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <http:operation location="/fun_Init初始化仓库物料" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <http:operation location="/fun_初始化仓库物料表" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <http:operation location="/fun_初始化物料数量表" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <http:operation location="/fun_初始化物料数量表_历史" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <http:operation location="/fun_物料数量_实际数量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <http:operation location="/fun_物料数量_在途量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <http:operation location="/fun_物料数量_在制量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <http:operation location="/fun_物料数量_受订单" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <http:operation location="/fun_物料数量_末领量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <http:operation location="/fun_出入库_采购入库" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <http:operation location="/fun_出入库_成品入库" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <http:operation location="/fun_出入库_成品出库" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <http:operation location="/fun_出入库_领料出库" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <http:operation location="/fun_仓库物料数量_库存总量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <http:operation location="/fun_仓库物料_库存总量" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MESWSMainHttpPost" type="tns:MESWSMainHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_Conn">
+      <http:operation location="/GetData_Conn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_conn">
+      <http:operation location="/SetEXSQL_conn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData_ERP">
+      <http:operation location="/GetData_ERP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL_ERP">
+      <http:operation location="/SetEXSQL_ERP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_发送流转卡">
+      <http:operation location="/fun_流转卡函数_发送流转卡" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_字段说明">
+      <http:operation location="/fun_流转卡函数_字段说明" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_流转卡状态">
+      <http:operation location="/fun_流转卡函数_流转卡状态" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_开工日报">
+      <http:operation location="/fun_流转卡函数_开工日报" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_完工日报">
+      <http:operation location="/fun_流转卡函数_完工日报" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_质量日报">
+      <http:operation location="/fun_流转卡函数_质量日报" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_流转卡函数_检验工序_质量日报">
+      <http:operation location="/fun_流转卡函数_检验工序_质量日报" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckAuthority">
+      <http:operation location="/CheckAuthority" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WS_Ping">
+      <http:operation location="/WS_Ping" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_Init初始化仓库物料">
+      <http:operation location="/fun_Init初始化仓库物料" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化仓库物料表">
+      <http:operation location="/fun_初始化仓库物料表" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表">
+      <http:operation location="/fun_初始化物料数量表" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_初始化物料数量表_历史">
+      <http:operation location="/fun_初始化物料数量表_历史" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_实际数量">
+      <http:operation location="/fun_物料数量_实际数量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在途量">
+      <http:operation location="/fun_物料数量_在途量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_在制量">
+      <http:operation location="/fun_物料数量_在制量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_受订单">
+      <http:operation location="/fun_物料数量_受订单" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_物料数量_末领量">
+      <http:operation location="/fun_物料数量_末领量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_采购入库">
+      <http:operation location="/fun_出入库_采购入库" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品入库">
+      <http:operation location="/fun_出入库_成品入库" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_成品出库">
+      <http:operation location="/fun_出入库_成品出库" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_出入库_领料出库">
+      <http:operation location="/fun_出入库_领料出库" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料数量_库存总量">
+      <http:operation location="/fun_仓库物料数量_库存总量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fun_仓库物料_库存总量">
+      <http:operation location="/fun_仓库物料_库存总量" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MESWSMain">
+    <wsdl:port name="MESWSMainSoap" binding="tns:MESWSMainSoap">
+      <soap:address location="http://218.244.150.177:10100/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainSoap12" binding="tns:MESWSMainSoap12">
+      <soap12:address location="http://218.244.150.177:10100/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainHttpGet" binding="tns:MESWSMainHttpGet">
+      <http:address location="http://218.244.150.177:10100/MESWSMain.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MESWSMainHttpPost" binding="tns:MESWSMainHttpPost">
+      <http:address location="http://218.244.150.177:10100/MESWSMain.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

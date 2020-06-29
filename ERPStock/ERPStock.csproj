@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F4CDB2C-D24B-4A7B-B2B7-4471A648D9EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPStock</RootNamespace>
+    <AssemblyName>ERPStock</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.LabelManager2, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\BIN\BIN\Interop.LabelManager2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.VisualStudio, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MySQL.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BIN\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fm空窗体.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm空窗体.Designer.cs">
+      <DependentUpon>fm空窗体.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_销售退货驳回原因.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_销售退货驳回原因.Designer.cs">
+      <DependentUpon>frm_销售退货驳回原因.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库出入库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库出入库.Designer.cs">
+      <DependentUpon>frm仓库出入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库未盘点记录.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库未盘点记录.Designer.cs">
+      <DependentUpon>frm仓库未盘点记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库物料数量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库物料数量.Designer.cs">
+      <DependentUpon>frm仓库物料数量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库物料数量明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库物料数量明细.Designer.cs">
+      <DependentUpon>frm仓库物料数量明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui可用库存查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui可用库存查询.Designer.cs">
+      <DependentUpon>ui可用库存查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui工单关闭退料清单.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui工单关闭退料清单.Designer.cs">
+      <DependentUpon>ui工单关闭退料清单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui物料台账.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui物料台账.Designer.cs">
+      <DependentUpon>ui物料台账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui货架信息维护.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui货架信息维护.Designer.cs">
+      <DependentUpon>ui货架信息维护.cs</DependentUpon>
+    </Compile>
+    <Compile Include="仓库物料数量货架修改.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="仓库物料数量货架修改.Designer.cs">
+      <DependentUpon>仓库物料数量货架修改.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库盘点历史列表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库盘点历史列表.Designer.cs">
+      <DependentUpon>frm仓库盘点历史列表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库盘点明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库盘点明细.Designer.cs">
+      <DependentUpon>frm仓库盘点明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm初始化UI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm初始化UI.Designer.cs">
+      <DependentUpon>frm初始化UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm呆滞品查询界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm呆滞品查询界面.Designer.cs">
+      <DependentUpon>frm呆滞品查询界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm工单返库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm工单返库.Designer.cs">
+      <DependentUpon>frm工单返库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm开发部临时用领料界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm开发部临时用领料界面.Designer.cs">
+      <DependentUpon>frm开发部临时用领料界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm成品退货查询界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm成品退货查询界面.Designer.cs">
+      <DependentUpon>frm成品退货查询界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm成品退货界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm成品退货界面.Designer.cs">
+      <DependentUpon>frm成品退货界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm用友现存量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm用友现存量.Designer.cs">
+      <DependentUpon>frm用友现存量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm返库单查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm返库单查询.Designer.cs">
+      <DependentUpon>frm返库单查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm退货申请查询界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm退货申请查询界面.Designer.cs">
+      <DependentUpon>frm退货申请查询界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm退货申请界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm退货申请界面.Designer.cs">
+      <DependentUpon>frm退货申请界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lprint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frm仓库初始化.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库初始化.Designer.cs">
+      <DependentUpon>frm仓库初始化.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库调拨主表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库调拨主表.Designer.cs">
+      <DependentUpon>frm仓库调拨主表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm仓库调拨明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm仓库调拨明细.Designer.cs">
+      <DependentUpon>frm仓库调拨明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ui仓库出入库汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui仓库出入库汇总.Designer.cs">
+      <DependentUpon>ui仓库出入库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui即时车间在制品.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui即时车间在制品.Designer.cs">
+      <DependentUpon>ui即时车间在制品.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI受订量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI受订量.Designer.cs">
+      <DependentUpon>UI受订量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI在制量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI在制量.Designer.cs">
+      <DependentUpon>UI在制量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI在途量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI在途量.Designer.cs">
+      <DependentUpon>UI在途量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui工时统计.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui工时统计.Designer.cs">
+      <DependentUpon>ui工时统计.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui收发存报表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui收发存报表.Designer.cs">
+      <DependentUpon>ui收发存报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui月份库存金额汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui月份库存金额汇总.Designer.cs">
+      <DependentUpon>ui月份库存金额汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI未领量.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI未领量.Designer.cs">
+      <DependentUpon>UI未领量.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI物料BOM视图%28不用%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI物料BOM视图%28不用%29.Designer.cs">
+      <DependentUpon>UI物料BOM视图%28不用%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui盘点偏差值记录.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui盘点偏差值记录.Designer.cs">
+      <DependentUpon>ui盘点偏差值记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI虚拟库存明细.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI虚拟库存明细.Designer.cs">
+      <DependentUpon>UI虚拟库存明细.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui调拨.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui调拨.Designer.cs">
+      <DependentUpon>ui调拨.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui调拨审核.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui调拨审核.Designer.cs">
+      <DependentUpon>ui调拨审核.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui调拨申请查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui调拨申请查询.Designer.cs">
+      <DependentUpon>ui调拨申请查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI过往采购单价查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI过往采购单价查询.Designer.cs">
+      <DependentUpon>UI过往采购单价查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui采购退货出库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui采购退货出库.Designer.cs">
+      <DependentUpon>ui采购退货出库.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPproduct\ERPproduct.csproj">
+      <Project>{192b81d1-18b5-4f9b-8a00-44c8640f89dc}</Project>
+      <Name>ERPproduct</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPpurchase\ERPpurchase.csproj">
+      <Project>{3ac8ab27-4277-46e5-9b63-a107ac928f91}</Project>
+      <Name>ERPpurchase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ItemInspection\ItemInspection.csproj">
+      <Project>{67fba310-912e-4756-a5a6-ec1f23737d9f}</Project>
+      <Name>ItemInspection</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBaseUI\MasterBaseUI.csproj">
+      <Project>{135be9fc-b986-42af-8fb3-52b47b4e8b42}</Project>
+      <Name>MasterBaseUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StockCore\StockCore.csproj">
+      <Project>{d4497319-a17d-44a0-822d-a62256e83b36}</Project>
+      <Name>StockCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WSAdapter\WSAdapter.csproj">
+      <Project>{7a94c20e-559a-4b6c-bf45-09c5b7fa46e5}</Project>
+      <Name>WSAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="fm空窗体.resx">
+      <DependentUpon>fm空窗体.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_销售退货驳回原因.resx">
+      <DependentUpon>frm_销售退货驳回原因.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库出入库.resx">
+      <DependentUpon>frm仓库出入库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库未盘点记录.resx">
+      <DependentUpon>frm仓库未盘点记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库物料数量.resx">
+      <DependentUpon>frm仓库物料数量.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ui可用库存查询.resx">
+      <DependentUpon>ui可用库存查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui工单关闭退料清单.resx">
+      <DependentUpon>ui工单关闭退料清单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui物料台账.resx">
+      <DependentUpon>ui物料台账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui货架信息维护.resx">
+      <DependentUpon>ui货架信息维护.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="仓库物料数量货架修改.resx">
+      <DependentUpon>仓库物料数量货架修改.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库盘点历史列表.resx">
+      <DependentUpon>frm仓库盘点历史列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库盘点明细.resx">
+      <DependentUpon>frm仓库盘点明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库调拨主表.resx">
+      <DependentUpon>frm仓库调拨主表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库调拨明细.resx">
+      <DependentUpon>frm仓库调拨明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm初始化UI.resx">
+      <DependentUpon>frm初始化UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm呆滞品查询界面.resx">
+      <DependentUpon>frm呆滞品查询界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm工单返库.resx">
+      <DependentUpon>frm工单返库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm开发部临时用领料界面.resx">
+      <DependentUpon>frm开发部临时用领料界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm成品退货查询界面.resx">
+      <DependentUpon>frm成品退货查询界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm成品退货界面.resx">
+      <DependentUpon>frm成品退货界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm用友现存量.resx">
+      <DependentUpon>frm用友现存量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm返库单查询.resx">
+      <DependentUpon>frm返库单查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm退货申请查询界面.resx">
+      <DependentUpon>frm退货申请查询界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm退货申请界面.resx">
+      <DependentUpon>frm退货申请界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui仓库出入库汇总.resx">
+      <DependentUpon>ui仓库出入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui即时车间在制品.resx">
+      <DependentUpon>ui即时车间在制品.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui工时统计.resx">
+      <DependentUpon>ui工时统计.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui收发存报表.resx">
+      <DependentUpon>ui收发存报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui月份库存金额汇总.resx">
+      <DependentUpon>ui月份库存金额汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui盘点偏差值记录.resx">
+      <DependentUpon>ui盘点偏差值记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui调拨.resx">
+      <DependentUpon>ui调拨.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui调拨审核.resx">
+      <DependentUpon>ui调拨审核.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui调拨申请查询.resx">
+      <DependentUpon>ui调拨申请查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI过往采购单价查询.resx">
+      <DependentUpon>UI过往采购单价查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库初始化.resx">
+      <DependentUpon>frm仓库初始化.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm仓库物料数量明细.resx">
+      <DependentUpon>frm仓库物料数量明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI受订量.resx">
+      <DependentUpon>UI受订量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI在制量.resx">
+      <DependentUpon>UI在制量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI在途量.resx">
+      <DependentUpon>UI在途量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI未领量.resx">
+      <DependentUpon>UI未领量.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI物料BOM视图%28不用%29.resx">
+      <DependentUpon>UI物料BOM视图%28不用%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI虚拟库存明细.resx">
+      <DependentUpon>UI虚拟库存明细.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui采购退货出库.resx">
+      <DependentUpon>ui采购退货出库.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Resources\Heartbeat_records_23.333333333333px_1179741_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\View_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150324035539687_easyicon_net_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_up_32px_1184719_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_down_32px_1184716_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom_in_32px_549007_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mark_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmark_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculation_25.297297297297px_1192784_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

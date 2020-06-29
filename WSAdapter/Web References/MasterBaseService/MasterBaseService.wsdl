@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://MasterMES.org/MasterService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s1="http://MasterMES.org/MasterService/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://MasterMES.org/MasterService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://MasterMES.org/MasterService">
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetDataWithTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetDataWithTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetEXSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetEXSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetEXSQLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BOLBUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bs" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BOLBUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BOLBUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BOLBDownLoad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strGUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BOLBDownLoadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BOLBDownLoadResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+    <s:schema targetNamespace="http://MasterMES.org/MasterService/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SetData" />
+  </wsdl:message>
+  <wsdl:message name="SetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetDataWithTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDataWithTransaction" />
+  </wsdl:message>
+  <wsdl:message name="SetDataWithTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDataWithTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:SetEXSQL" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:SetEXSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:BOLBUpload" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:BOLBUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadSoapIn">
+    <wsdl:part name="parameters" element="tns:BOLBDownLoad" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadSoapOut">
+    <wsdl:part name="parameters" element="tns:BOLBDownLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadHttpGetIn">
+    <wsdl:part name="bs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadHttpGetIn">
+    <wsdl:part name="strGUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostIn">
+    <wsdl:part name="SQL" type="s:string" />
+    <wsdl:part name="strConn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SetEXSQLHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadHttpPostIn">
+    <wsdl:part name="bs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="BOLBUploadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadHttpPostIn">
+    <wsdl:part name="strGUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BOLBDownLoadHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:portType name="MasterBaseServiceSoap">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <wsdl:input message="tns:SetDataSoapIn" />
+      <wsdl:output message="tns:SetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDataWithTransaction">
+      <wsdl:input message="tns:SetDataWithTransactionSoapIn" />
+      <wsdl:output message="tns:SetDataWithTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLSoapIn" />
+      <wsdl:output message="tns:SetEXSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <wsdl:input message="tns:BOLBUploadSoapIn" />
+      <wsdl:output message="tns:BOLBUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <wsdl:input message="tns:BOLBDownLoadSoapIn" />
+      <wsdl:output message="tns:BOLBDownLoadSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MasterBaseServiceHttpGet">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpGetIn" />
+      <wsdl:output message="tns:GetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpGetIn" />
+      <wsdl:output message="tns:SetEXSQLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <wsdl:input message="tns:BOLBUploadHttpGetIn" />
+      <wsdl:output message="tns:BOLBUploadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <wsdl:input message="tns:BOLBDownLoadHttpGetIn" />
+      <wsdl:output message="tns:BOLBDownLoadHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="MasterBaseServiceHttpPost">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpPostIn" />
+      <wsdl:output message="tns:GetDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <wsdl:input message="tns:SetEXSQLHttpPostIn" />
+      <wsdl:output message="tns:SetEXSQLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <wsdl:input message="tns:BOLBUploadHttpPostIn" />
+      <wsdl:output message="tns:BOLBUploadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <wsdl:input message="tns:BOLBDownLoadHttpPostIn" />
+      <wsdl:output message="tns:BOLBDownLoadHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MasterBaseServiceSoap" type="tns:MasterBaseServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/SetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDataWithTransaction">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/SetDataWithTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/BOLBUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <soap:operation soapAction="http://MasterMES.org/MasterService/BOLBDownLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterBaseServiceSoap12" type="tns:MasterBaseServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetData">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/SetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetDataWithTransaction">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/SetDataWithTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/SetEXSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/BOLBUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <soap12:operation soapAction="http://MasterMES.org/MasterService/BOLBDownLoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterBaseServiceHttpGet" type="tns:MasterBaseServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <http:operation location="/BOLBUpload" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <http:operation location="/BOLBDownLoad" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MasterBaseServiceHttpPost" type="tns:MasterBaseServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEXSQL">
+      <http:operation location="/SetEXSQL" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBUpload">
+      <http:operation location="/BOLBUpload" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BOLBDownLoad">
+      <http:operation location="/BOLBDownLoad" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MasterBaseService">
+    <wsdl:port name="MasterBaseServiceSoap" binding="tns:MasterBaseServiceSoap">
+      <soap:address location="http://localhost:10013/MasterBaseService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterBaseServiceSoap12" binding="tns:MasterBaseServiceSoap12">
+      <soap12:address location="http://localhost:10013/MasterBaseService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterBaseServiceHttpGet" binding="tns:MasterBaseServiceHttpGet">
+      <http:address location="http://localhost:10013/MasterBaseService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MasterBaseServiceHttpPost" binding="tns:MasterBaseServiceHttpPost">
+      <http:address location="http://localhost:10013/MasterBaseService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

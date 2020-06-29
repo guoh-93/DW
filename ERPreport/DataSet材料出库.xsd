@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet材料出库" targetNamespace="http://tempuri.org/DataSet材料出库.xsd" xmlns:mstns="http://tempuri.org/DataSet材料出库.xsd" xmlns="http://tempuri.org/DataSet材料出库.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet材料出库" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet材料出库" msprop:Generator_UserDSName="DataSet材料出库">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="料号" msprop:Generator_ColumnVarNameInTable="column料号" msprop:Generator_ColumnPropNameInRow="料号" msprop:Generator_ColumnPropNameInTable="料号Column" msprop:Generator_UserColumnName="料号" type="xs:string" minOccurs="0" />
+              <xs:element name="物料名称" msprop:Generator_ColumnVarNameInTable="column物料名称" msprop:Generator_ColumnPropNameInRow="物料名称" msprop:Generator_ColumnPropNameInTable="物料名称Column" msprop:Generator_UserColumnName="物料名称" type="xs:string" minOccurs="0" />
+              <xs:element name="单位" msprop:Generator_ColumnVarNameInTable="column单位" msprop:Generator_ColumnPropNameInRow="单位" msprop:Generator_ColumnPropNameInTable="单位Column" msprop:Generator_UserColumnName="单位" type="xs:string" minOccurs="0" />
+              <xs:element name="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" msprop:Generator_UserColumnName="数量" type="xs:string" minOccurs="0" />
+              <xs:element name="库位" msprop:Generator_ColumnVarNameInTable="column库位" msprop:Generator_ColumnPropNameInRow="库位" msprop:Generator_ColumnPropNameInTable="库位Column" msprop:Generator_UserColumnName="库位" type="xs:string" minOccurs="0" />
+              <xs:element name="当前库存" msprop:Generator_ColumnVarNameInTable="column当前库存" msprop:Generator_ColumnPropNameInRow="当前库存" msprop:Generator_ColumnPropNameInTable="当前库存Column" msprop:Generator_UserColumnName="当前库存" type="xs:string" minOccurs="0" />
+              <xs:element name="规格型号" msprop:Generator_ColumnVarNameInTable="column规格型号" msprop:Generator_ColumnPropNameInRow="规格型号" msprop:Generator_ColumnPropNameInTable="规格型号Column" msprop:Generator_UserColumnName="规格型号" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

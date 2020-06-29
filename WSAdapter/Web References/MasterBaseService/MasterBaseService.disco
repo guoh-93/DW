@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:10013/MasterBaseService.asmx?wsdl" docRef="http://localhost:10013/MasterBaseService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:10013/MasterBaseService.asmx" xmlns:q1="http://MasterMES.org/MasterService" binding="q1:MasterBaseServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:10013/MasterBaseService.asmx" xmlns:q2="http://MasterMES.org/MasterService" binding="q2:MasterBaseServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

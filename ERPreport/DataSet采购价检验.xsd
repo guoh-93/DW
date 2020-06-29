@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet采购价检验" targetNamespace="http://tempuri.org/DataSet采购价检验.xsd" xmlns:mstns="http://tempuri.org/DataSet采购价检验.xsd" xmlns="http://tempuri.org/DataSet采购价检验.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet采购价检验" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet采购价检验" msprop:Generator_UserDSName="DataSet采购价检验">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POS" msprop:Generator_ColumnVarNameInTable="columnPOS" msprop:Generator_ColumnPropNameInRow="POS" msprop:Generator_ColumnPropNameInTable="POSColumn" msprop:Generator_UserColumnName="POS" type="xs:string" minOccurs="0" />
+              <xs:element name="检验项目" msprop:Generator_ColumnVarNameInTable="column检验项目" msprop:Generator_ColumnPropNameInRow="检验项目" msprop:Generator_ColumnPropNameInTable="检验项目Column" msprop:Generator_UserColumnName="检验项目" type="xs:string" minOccurs="0" />
+              <xs:element name="检验要求" msprop:Generator_ColumnVarNameInTable="column检验要求" msprop:Generator_ColumnPropNameInRow="检验要求" msprop:Generator_ColumnPropNameInTable="检验要求Column" msprop:Generator_UserColumnName="检验要求" type="xs:string" minOccurs="0" />
+              <xs:element name="抽检数" msprop:Generator_ColumnVarNameInTable="column抽检数" msprop:Generator_ColumnPropNameInRow="抽检数" msprop:Generator_ColumnPropNameInTable="抽检数Column" msprop:Generator_UserColumnName="抽检数" type="xs:string" minOccurs="0" />
+              <xs:element name="扩大值" msprop:Generator_ColumnVarNameInTable="column扩大值" msprop:Generator_ColumnPropNameInRow="扩大值" msprop:Generator_ColumnPropNameInTable="扩大值Column" msprop:Generator_UserColumnName="扩大值" type="xs:string" minOccurs="0" />
+              <xs:element name="检验下限" msprop:Generator_ColumnVarNameInTable="column检验下限" msprop:Generator_ColumnPropNameInRow="检验下限" msprop:Generator_ColumnPropNameInTable="检验下限Column" msprop:Generator_UserColumnName="检验下限" type="xs:string" minOccurs="0" />
+              <xs:element name="检验上限" msprop:Generator_ColumnVarNameInTable="column检验上限" msprop:Generator_ColumnPropNameInRow="检验上限" msprop:Generator_ColumnPropNameInTable="检验上限Column" msprop:Generator_UserColumnName="检验上限" type="xs:string" minOccurs="0" />
+              <xs:element name="允许下限" msprop:Generator_ColumnVarNameInTable="column允许下限" msprop:Generator_ColumnPropNameInRow="允许下限" msprop:Generator_ColumnPropNameInTable="允许下限Column" msprop:Generator_UserColumnName="允许下限" type="xs:string" minOccurs="0" />
+              <xs:element name="允许上限" msprop:Generator_ColumnVarNameInTable="column允许上限" msprop:Generator_ColumnPropNameInRow="允许上限" msprop:Generator_ColumnPropNameInTable="允许上限Column" msprop:Generator_UserColumnName="允许上限" type="xs:string" minOccurs="0" />
+              <xs:element name="合格" msprop:Generator_ColumnVarNameInTable="column合格" msprop:Generator_ColumnPropNameInRow="合格" msprop:Generator_ColumnPropNameInTable="合格Column" msprop:Generator_UserColumnName="合格" type="xs:string" minOccurs="0" />
+              <xs:element name="不合格原因" msprop:Generator_ColumnVarNameInTable="column不合格原因" msprop:Generator_ColumnPropNameInRow="不合格原因" msprop:Generator_ColumnPropNameInTable="不合格原因Column" msprop:Generator_UserColumnName="不合格原因" type="xs:string" minOccurs="0" />
+              <xs:element name="不合格数量" msprop:Generator_ColumnVarNameInTable="column不合格数量" msprop:Generator_ColumnPropNameInRow="不合格数量" msprop:Generator_ColumnPropNameInTable="不合格数量Column" msprop:Generator_UserColumnName="不合格数量" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

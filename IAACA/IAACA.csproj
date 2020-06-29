@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C08F4AED-CDE8-4646-BE2D-5D179B868529}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IAACA</RootNamespace>
+    <AssemblyName>IAACA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fm修改工时.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm修改工时.Designer.cs">
+      <DependentUpon>fm修改工时.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fm修改软件费用.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fm修改软件费用.Designer.cs">
+      <DependentUpon>fm修改软件费用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IA.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui_出入库汇总_财务.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_出入库汇总_财务.Designer.cs">
+      <DependentUpon>ui_出入库汇总_财务.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_生产完工状况.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_生产完工状况.Designer.cs">
+      <DependentUpon>ui_生产完工状况.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_软件费用查询.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_软件费用查询.Designer.cs">
+      <DependentUpon>ui_软件费用查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_软件费用维护界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_软件费用维护界面.Designer.cs">
+      <DependentUpon>ui_软件费用维护界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui_采购执行统计表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui_采购执行统计表.Designer.cs">
+      <DependentUpon>ui_采购执行统计表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui产品成本测算.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui产品成本测算.Designer.cs">
+      <DependentUpon>ui产品成本测算.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui工时维护界面.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui工时维护界面.Designer.cs">
+      <DependentUpon>ui工时维护界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui工时软件查询导入.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui工时软件查询导入.Designer.cs">
+      <DependentUpon>ui工时软件查询导入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui手工赋单价.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui手工赋单价.Designer.cs">
+      <DependentUpon>ui手工赋单价.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui收发存_分仓库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui收发存_分仓库.Designer.cs">
+      <DependentUpon>ui收发存_分仓库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui收发存汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui收发存汇总.Designer.cs">
+      <DependentUpon>ui收发存汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui生产订单执行日报表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui生产订单执行日报表.Designer.cs">
+      <DependentUpon>ui生产订单执行日报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui生产订单执行月报表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui生产订单执行月报表.Designer.cs">
+      <DependentUpon>ui生产订单执行月报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui销售发货开票勾对表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui销售发货开票勾对表.Designer.cs">
+      <DependentUpon>ui销售发货开票勾对表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui销售执行统计.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui销售执行统计.Designer.cs">
+      <DependentUpon>ui销售执行统计.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui销售统计表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui销售统计表.Designer.cs">
+      <DependentUpon>ui销售统计表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui销售综合统计报表.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui销售综合统计报表.Designer.cs">
+      <DependentUpon>ui销售综合统计报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="存货核算.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="存货核算.Designer.cs">
+      <DependentUpon>存货核算.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="fm修改工时.resx">
+      <DependentUpon>fm修改工时.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fm修改软件费用.resx">
+      <DependentUpon>fm修改软件费用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui_出入库汇总_财务.resx">
+      <DependentUpon>ui_出入库汇总_财务.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_生产完工状况.resx">
+      <DependentUpon>ui_生产完工状况.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_软件费用查询.resx">
+      <DependentUpon>ui_软件费用查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_软件费用维护界面.resx">
+      <DependentUpon>ui_软件费用维护界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui_采购执行统计表.resx">
+      <DependentUpon>ui_采购执行统计表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui产品成本测算.en-001.resx">
+      <DependentUpon>ui产品成本测算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui产品成本测算.en-150.resx">
+      <DependentUpon>ui产品成本测算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui产品成本测算.resx">
+      <DependentUpon>ui产品成本测算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui工时维护界面.resx">
+      <DependentUpon>ui工时维护界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui工时软件查询导入.resx">
+      <DependentUpon>ui工时软件查询导入.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui手工赋单价.resx">
+      <DependentUpon>ui手工赋单价.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui收发存_分仓库.resx">
+      <DependentUpon>ui收发存_分仓库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui收发存汇总.resx">
+      <DependentUpon>ui收发存汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui生产订单执行日报表.resx">
+      <DependentUpon>ui生产订单执行日报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui生产订单执行月报表.resx">
+      <DependentUpon>ui生产订单执行月报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui销售发货开票勾对表.resx">
+      <DependentUpon>ui销售发货开票勾对表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui销售执行统计.resx">
+      <DependentUpon>ui销售执行统计.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui销售统计表.resx">
+      <DependentUpon>ui销售统计表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui销售综合统计报表.resx">
+      <DependentUpon>ui销售综合统计报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="存货核算.resx">
+      <DependentUpon>存货核算.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CPublic\CPublic.csproj">
+      <Project>{3683dfae-3ed8-439c-a5dc-bacbe135bd40}</Project>
+      <Name>CPublic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPHR\ERPorg.csproj">
+      <Project>{7a1df501-4e33-4b4d-9422-99593cf7d841}</Project>
+      <Name>ERPorg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBaseUI\MasterBaseUI.csproj">
+      <Project>{135be9fc-b986-42af-8fb3-52b47b4e8b42}</Project>
+      <Name>MasterBaseUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterBase\MasterBase.csproj">
+      <Project>{deb9eef6-a455-459d-95a1-36154b60dd64}</Project>
+      <Name>MasterBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterStart\MasterStart.csproj">
+      <Project>{bed166d2-0b41-42e8-8753-46f60250dbe2}</Project>
+      <Name>MasterStart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox_in_32px_1137881_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateData_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20150326043624624_easyicon_net_321.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
