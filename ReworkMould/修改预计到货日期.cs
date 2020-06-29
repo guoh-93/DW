@@ -56,6 +56,10 @@ namespace ReworkMould
             {
                 throw new Exception("请选择预计来料日期");
             }
+            if (Convert.ToDateTime(dateEdit1.EditValue) < Convert.ToDateTime(dr_xg["需求来料日期"]))
+            {
+                throw new Exception("预计来料日期小于需求来料日期，请确认");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
