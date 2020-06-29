@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.components = new System.ComponentModel.Container();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem6 = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -87,13 +88,13 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dataBindHelper1 = new CPublic.DataBindHelper();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.查看物料明细ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看销售明细ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.完成ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.ghinder1 = new ERPorg.ghinder();
+            this.ghinder1 = new ERPorg.ghinder(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -534,6 +535,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(110, 44);
             this.simpleButton1.TabIndex = 132;
             this.simpleButton1.Text = "删除明细";
+            this.simpleButton1.Visible = false;
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // panel2
@@ -859,26 +861,26 @@
             this.查看销售明细ToolStripMenuItem,
             this.完成ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // 查看物料明细ToolStripMenuItem
             // 
             this.查看物料明细ToolStripMenuItem.Name = "查看物料明细ToolStripMenuItem";
-            this.查看物料明细ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.查看物料明细ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.查看物料明细ToolStripMenuItem.Text = "查看物料明细";
             this.查看物料明细ToolStripMenuItem.Click += new System.EventHandler(this.查看物料明细ToolStripMenuItem_Click);
             // 
             // 查看销售明细ToolStripMenuItem
             // 
             this.查看销售明细ToolStripMenuItem.Name = "查看销售明细ToolStripMenuItem";
-            this.查看销售明细ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.查看销售明细ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.查看销售明细ToolStripMenuItem.Text = "查看销售明细";
             this.查看销售明细ToolStripMenuItem.Click += new System.EventHandler(this.查看销售明细ToolStripMenuItem_Click);
             // 
             // 完成ToolStripMenuItem
             // 
             this.完成ToolStripMenuItem.Name = "完成ToolStripMenuItem";
-            this.完成ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.完成ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.完成ToolStripMenuItem.Text = "完成";
             this.完成ToolStripMenuItem.Click += new System.EventHandler(this.完成ToolStripMenuItem_Click);
             // 
