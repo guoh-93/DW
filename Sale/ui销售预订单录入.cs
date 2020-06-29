@@ -11,6 +11,7 @@ namespace ERPSale
 {
     public partial class ui销售预订单录入 : UserControl
     {
+        //123456测试
         #region
         string strconn = CPublic.Var.strConn;
 
