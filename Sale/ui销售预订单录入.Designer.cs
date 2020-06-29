@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barManager1 = new DevExpress.XtraBars.BarManager();
+            this.components = new System.ComponentModel.Container();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -115,8 +116,7 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSearchLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.dataBindHelper1 = new CPublic.DataBindHelper();
-            this.ghinder1 = new ERPorg.ghinder();
+            this.ghinder2 = new ERPorg.ghinder(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_税率.Properties)).BeginInit();
@@ -313,7 +313,6 @@
             // 
             // textBox1
             // 
-            this.dataBindHelper1.SetBindFieldName(this.textBox1, "部门名称");
             this.textBox1.Location = new System.Drawing.Point(582, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -331,7 +330,6 @@
             // 
             // txt_税率
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_税率, "税率");
             this.txt_税率.EditValue = "0";
             this.txt_税率.Location = new System.Drawing.Point(582, 22);
             this.txt_税率.MenuManager = this.barManager1;
@@ -353,7 +351,6 @@
             // 
             // txt_业务员
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_业务员, "业务员");
             this.txt_业务员.Location = new System.Drawing.Point(340, 22);
             this.txt_业务员.MenuManager = this.barManager1;
             this.txt_业务员.Name = "txt_业务员";
@@ -364,7 +361,6 @@
             // 
             // txt_录入人员
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_录入人员, "制单人");
             this.txt_录入人员.Location = new System.Drawing.Point(811, 22);
             this.txt_录入人员.Name = "txt_录入人员";
             this.txt_录入人员.ReadOnly = true;
@@ -382,7 +378,6 @@
             // 
             // txt_税前金额
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_税前金额, "不含税金额");
             this.txt_税前金额.Location = new System.Drawing.Point(91, 75);
             this.txt_税前金额.Name = "txt_税前金额";
             this.txt_税前金额.ReadOnly = true;
@@ -400,7 +395,6 @@
             // 
             // searchLookUpEdit1
             // 
-            this.dataBindHelper1.SetBindFieldName(this.searchLookUpEdit1, "客户编号");
             this.searchLookUpEdit1.EditValue = "";
             this.searchLookUpEdit1.Location = new System.Drawing.Point(91, 49);
             this.searchLookUpEdit1.MenuManager = this.barManager1;
@@ -444,7 +438,6 @@
             // 
             // txt_销售备注
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_销售备注, "备注");
             this.txt_销售备注.Location = new System.Drawing.Point(91, 102);
             this.txt_销售备注.Name = "txt_销售备注";
             this.txt_销售备注.Size = new System.Drawing.Size(399, 21);
@@ -461,7 +454,6 @@
             // 
             // txt_金额
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_金额, "含税金额");
             this.txt_金额.Location = new System.Drawing.Point(340, 75);
             this.txt_金额.Name = "txt_金额";
             this.txt_金额.ReadOnly = true;
@@ -515,7 +507,6 @@
             // 
             // txt_客户名称
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_客户名称, "客户名称");
             this.txt_客户名称.Location = new System.Drawing.Point(340, 49);
             this.txt_客户名称.Name = "txt_客户名称";
             this.txt_客户名称.ReadOnly = true;
@@ -533,7 +524,6 @@
             // 
             // txt_预订单号
             // 
-            this.dataBindHelper1.SetBindFieldName(this.txt_预订单号, "销售预订单号");
             this.txt_预订单号.Location = new System.Drawing.Point(91, 22);
             this.txt_预订单号.Name = "txt_预订单号";
             this.txt_预订单号.ReadOnly = true;
@@ -636,7 +626,7 @@
             // gc
             // 
             this.gc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ghinder1.SetgridInder(this.gc, "1");
+            this.ghinder2.SetgridInder(this.gc, "");
             this.gc.Location = new System.Drawing.Point(0, 233);
             this.gc.MainView = this.gv;
             this.gc.MenuManager = this.barManager1;
@@ -1156,8 +1146,6 @@
             this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-//            this.repositoryItemGridLookUpEdit1View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.repositoryItemGridLookUpEdit1View_RowClick);
-          //  this.repositoryItemGridLookUpEdit1View.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.repositoryItemGridLookUpEdit1View_RowCellClick);
             // 
             // gridColumn43
             // 
@@ -1215,13 +1203,13 @@
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // ghinder1
+            // ghinder2
             // 
-            this.ghinder1.bool_V = true;
-            this.ghinder1.EnableCtrlV = true;
-            this.ghinder1.TotalCopy = true;
-            this.ghinder1.UIName = "ui销售预订单录入";
-            this.ghinder1.Width = 40;
+            this.ghinder2.bool_V = true;
+            this.ghinder2.EnableCtrlV = false;
+            this.ghinder2.TotalCopy = true;
+            this.ghinder2.UIName = "ui销售预订单录入";
+            this.ghinder2.Width = 40;
             // 
             // ui销售预订单录入
             // 
@@ -1352,5 +1340,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private ERPorg.ghinder ghinder2;
     }
 }

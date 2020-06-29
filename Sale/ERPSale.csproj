@@ -797,10 +797,6 @@
       <Project>{7a94c20e-559a-4b6c-bf45-09c5b7fa46e5}</Project>
       <Name>WSAdapter</Name>
     </ProjectReference>
-    <ProjectReference Include="..\赵峰的DEMO\赵峰的DEMO.csproj">
-      <Project>{1e58c161-af4b-4b36-afae-e668f85a1b8e}</Project>
-      <Name>赵峰的DEMO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddToLibrary_32x32.png" />
